@@ -12,6 +12,7 @@
 <br>
 <hr>
 
+## Week 01
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 15.10.2021 F | LS95-01 | 0800 - 1600 <br> 1830 - 2115 | Worked through sections 1 - 18. Skipped section 13. <br> Worked through sections 19 and 20. | 
@@ -23,6 +24,7 @@
 <br>
 <hr>
 
+## Week 02
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 18.10.2021 M | JS100-01 | 0845 - 1000 <br> 1045 - 1130 <br> 1200 - 1215 <br> 1230 - 1300 <br> 1600 - 1800 <br> 1900 - 1930 <br> 1945 - 2015 | Read through `Introduction`. Read it again and took notes. <br> Read through but did not take notes on `Preparations`. <br> Did the exercises in `Preparations`. <br> Read through but did not take notes on `The Basics`. <br> Did exercises 1 and 2. Made exercise 2 more challenging. <br> Did the rest of chapter 3 exercises. <br> Took notes on data types in chapter 3. |
@@ -32,6 +34,19 @@
 | 22.10.2021 F | JS100-01 | 0900 - 0915 <br> 0930 - 1000 <br> 1100 - 1130 <br> 1800 - 1845 <br> 1900 - 1945 | Worked through `Functions 1` exercise 11. <br> Worked through `Variable Scope`. <br> Worked through `Strings`. <br> Worked through `Arrays`. <br> Worked through `Functions 2`. |
 | 23.10.2021 S | JS100-01 | 0600 - 0630 | Worked through `Objects`. |
 | 24.10.2021 U | Nothing | - | - |
+<!-- |  |  |  |  | -->
+
+
+<br>
+<br>
+<br>
+<hr>
+
+## Week 03
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 25.10.2021 M | LS95-01 | 1600 - 1800 <br> 1900 - 1930 | Took notes from videos 1 - 4 of Section 19. <br> Took notes from video 5 of Section 19. |
+| 26.10.2021 T | LS95-01 | 0900 - 1000 | Took notes from video 6 of Section 19. |
 <!-- |  |  |  |  | -->
 
 
