@@ -1,3 +1,8 @@
 .vscode/*
-*/*/*/node_modules/
+
+# Node
+node_modules/
+package-lock.json
+
+# Notes from their paid content
 /ignore
