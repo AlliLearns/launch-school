@@ -34,15 +34,37 @@ const CODE_MAP = {
 welcomeUser();
 
 do {
-  const playerChoice = getPlayerChoice(`Choose one: ${PRINT_CHOICES.join(', ')}.`);
-  const computerChoice = getComputerChoice();
+  const plays = [];
+  let playerWins = 0;
+  let computerWins = 0;
 
-  reportChoices(playerChoice, computerChoice);
+  while (playerWins < 3 && computerWins < 3) {
+    console.log(`${drawPrompt()} Round ${plays.length + 1}.`);
 
-  const winner = determineWinner(playerChoice, computerChoice);
-  console.log(formatWinner(winner));
+    const playerChoice = getPlayerChoice(`Choose one: ${PRINT_CHOICES.join(', ')}.`);
+    const computerChoice = getComputerChoice();
 
-} while (askUser(`Play again? (y/n)`));
+    reportChoices(playerChoice, computerChoice);
+
+    const winner = determineWinner(playerChoice, computerChoice);
+    console.log(formatWinner(winner));
+
+    plays.push(winner);
+
+    if (winner === VALID_OUTCOMES[1]) {
+      console.log('incrementing player win count');
+      playerWins += 1;
+    } else if (winner === VALID_OUTCOMES[2]) {
+      console.log('incrementing computer win count');
+      computerWins += 1;
+    }
+
+    console.log(playerWins);
+    console.log(computerWins);
+  }
+
+  reportChampion(playerWins);
+} while (askUser(`Play again? (y / n)`));
 
 farewellUser();
 
@@ -133,6 +155,16 @@ function askUser(message) {
 function validResponse(answer) {
   const validAnswers = ['yes', 'y', 'yea', 'yeah', 'yep', 'no', 'n', 'nah', 'nope'];
   return validAnswers.includes(answer);
+}
+
+
+function reportChampion(playerWinsCount) {
+  if (playerWinsCount >= 3) {
+    console.log("Yay! You won the whole game!");
+  } else {
+    console.log("Computer won best 3 out of 5 games.");
+  }
+
 }
 
 function drawPrompt() {
