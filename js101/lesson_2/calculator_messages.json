@@ -1,0 +1,27 @@
+{
+  "promptLanguage": "Choose your language: 'en' for English or 'es' for Spanish.",
+
+  "en": {
+    "welcome"  : "Welcome to this calculator! You can add, subtract, multiply and divide two numbers.",
+    "firstNum" : "What's the first number?",
+    "secondNum": "What's the second number?",
+    "operation": "What operation would you like to perform?",
+    "numAgain" : "Sorry, that wasn't a number. Try again.",
+    "opAgain"  : "Sorry, we don't know that operation. Try again.",
+    "askAgain" : "Sorry, I didn't understand that. Type 'y' or 'n'.",
+    "another"  : "Do you want another calculation? (y / n)",
+    "farewell" : "Thanks for using this calculator! Bye!"
+  },
+
+  "es": {
+    "welcome"  : "¡Bienvenido a esta calculadora! Puede sumar, restar, multiplicar y dividir dos números.",
+    "firstNum" : "¿Cuál es el primer número?",
+    "secondNum": "¿Cuál es el segundo número?",
+    "operation": "¿Qué operación le gustaría realizar?",
+    "numAgain" : "Lo siento, ese no era un número. Intentar otra vez.",
+    "opAgain"  : "Lo siento, no conocemos esa operación. Intentar otra vez.",
+    "askAgain" : "Lo siento, no entendí eso. Escriba 's' o 'n'.",
+    "another"  : "¿Quieres otro cálculo? (s / n)",
+    "farewell" : "¡Gracias por usar esta calculadora! ¡Chau!"
+  }
+}
