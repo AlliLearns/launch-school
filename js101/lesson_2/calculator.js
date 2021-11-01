@@ -8,30 +8,30 @@ const readLine = require('../../node_modules/readline-sync');
 const MESSAGES = require('./calculator_messages.json');
 
 const VALID_OPERATORS = ['1', '2', '3', '4', '+', '-', '*', '/'];
-const VALID_LANGUAGE_CODES = ['en', 'es'];
+const VALID_LANGUAGE_CODES = ['en', 'es', 'english', 'spanish', 'espaniol'];
+
 
 const langChoice = getLanguageChoice();
 greetUser();
 
-
 do {
+  console.log();
   const [number1, number2, operator] = getUserInput();
   const result = performOperation(number1, number2, operator);
   printResult(result);
 
-} while (askUser(MESSAGES[langChoice].another));
-
+} while (askUser(MESSAGES[langChoice].askAnotherCalculation));
 
 farewellUser();
 
 
 function getLanguageChoice() {
-  let lang = readLine.question(`${drawPrompt()} ${MESSAGES.promptLanguage}\n`);
+  let lang = readLine.question(`${drawPrompt()} ${MESSAGES.promptLanguage}: `);
 
   while (invalidLanguage(lang)) {
     lang = readLine.question(`${drawPrompt()}`
                               + ` Sorry, we don't recognize that language.\n`
-                              + `${drawPrompt()} ${MESSAGES.promptLanguage}\n`);
+                              + `${drawPrompt()} ${MESSAGES.promptLanguage}: `);
   }
 
   return lang.toLowerCase();
@@ -43,26 +43,27 @@ function invalidLanguage(code) {
 }
 
 function greetUser() {
-  console.log(MESSAGES[langChoice].welcome);
+  console.log(`\n${MESSAGES[langChoice].welcome}`);
 }
 
 function farewellUser() {
   console.log(MESSAGES[langChoice].farewell);
 }
 
+
 function getUserInput() {
-  const number1 = promptNumber(MESSAGES[langChoice].firstNum);
-  const number2 = promptNumber(MESSAGES[langChoice].secondNum);
-  const operation = promptOperation(MESSAGES[langChoice].operation);
+  const number1 = promptForNumber(MESSAGES[langChoice].firstNum);
+  const number2 = promptForNumber(MESSAGES[langChoice].secondNum);
+  const operation = promptForOperation(MESSAGES[langChoice].operation);
 
   return [number1, number2, operation];
 }
 
-function promptNumber(message) {
-  let num = readLine.question(`${drawPrompt()} ${message}\n`);
+function promptForNumber(message) {
+  let num = readLine.question(`${drawPrompt()} ${message}: `);
 
   while (invalidNumber(num)) {
-    num = readLine.question(`${drawPrompt()} ${MESSAGES[langChoice].numAgain}\n`);
+    num = readLine.question(`${drawPrompt()} ${MESSAGES[langChoice].askNumAgain}: `);
   }
 
   return Number(num);
@@ -72,11 +73,11 @@ function invalidNumber(num) {
   return num.trim() === '' || Number.isNaN(Number(num));
 }
 
-function promptOperation(message) {
-  let operation = readLine.question(`${drawPrompt()} ${message}\n`);
+function promptForOperation(message) {
+  let operation = readLine.question(`${drawPrompt()} ${message}: `);
 
   while (!VALID_OPERATORS.includes(operation)) {
-    operation = readLine.question(`${drawPrompt()} ${MESSAGES[langChoice].opAgain}\n`);
+    operation = readLine.question(`${drawPrompt()} ${MESSAGES[langChoice].askOperatorAgain}: `);
   }
 
   return Number(translateOperator(operation));
@@ -92,26 +93,36 @@ function translateOperator(operator) {
   }
 }
 
+
 function performOperation(num1, num2, operation) {
   switch (operation) {
     case 1: return num1 + num2;
     case 2: return num1 - num2;
     case 3: return num1 * num2;
-    case 4: return num1 / num2;
-    default: return "Invalid operation.";
+    case 4: return handleDivideByZero(num1, num2);
+    default: return MESSAGES[langChoice].invalidOperation;
   }
 }
 
+function handleDivideByZero(num1, num2) {
+  if (num2 === 0) { return MESSAGES[langChoice].canNotDivideZero } 
+  return num1 / num2;
+}
+
 function printResult(result) {
-  console.log(`The result is: ${result}.`);
+  if (typeof result === 'number') {
+    console.log(`\nThe result is: ${result}.\n`);
+  } else {
+    console.log(`\nSomething went wrong: ${result}.\n`);
+  }
 }
 
 
 function askUser(message) {
-  let answer = readLine.question(`${drawPrompt()} ${message}\n`).toLowerCase();
+  let answer = readLine.question(`${drawPrompt()} ${message}: `).toLowerCase();
 
   while (!validResponse(answer)) {
-    answer = readLine.question(`${drawPrompt()} ${MESSAGES[langChoice].askAgain}\n`).toLowerCase();
+    answer = readLine.question(`${drawPrompt()} ${MESSAGES[langChoice].askKeepGoingAgain}: `).toLowerCase();
   }
 
   return answer[0] !== 'n';
