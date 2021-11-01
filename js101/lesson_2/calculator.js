@@ -105,7 +105,9 @@ function performOperation(num1, num2, operation) {
 }
 
 function handleDivideByZero(num1, num2) {
-  if (num2 === 0) { return MESSAGES[langChoice].canNotDivideZero } 
+  if (num2 === 0) {
+    return MESSAGES[langChoice].canNotDivideZero;
+  }
   return num1 / num2;
 }
 
