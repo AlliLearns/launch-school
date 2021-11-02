@@ -1,8 +1,9 @@
 {
-  "promptLanguage": "Choose your language: 'en' for English or 'es' for Spanish",
+  "promptLanguage"   : "Choose your language: 'en' for English or 'es' for Spanish",
+  "languageNotKnown" : "Sorry, we don't recognize that language",
 
   "en": {
-    "welcome"                : "Welcome to this calculator! You can add, subtract, multiply and divide two numbers.",
+    "welcome"                : "Welcome to this calculator! You can add(+), subtract(-), multiply(*) and divide(/) two numbers.",
     "firstNum"               : "What's the first number",
     "secondNum"              : "What's the second number",
     "operation"              : "What operation would you like to perform",
@@ -10,22 +11,28 @@
     "askOperatorAgain"       : "Sorry, we don't know that operation. Try again",
     "canNotDivideZero"       : "Can't divide by zero",
     "invalidOperation"       : "Invalid operation",
+    "theResultIs"            : "The result is",
+    "somethingWentWrong"     : "Something went wrong",
     "askKeepGoingAgain"      : "Sorry, I didn't understand that. Type 'y' or 'n'",
     "askAnotherCalculation"  : "Do you want another calculation? (y / n)",
+    "yesNoResponses"         : ["yes", "y", "yea", "yeah", "yep", "no", "n", "nah", "nope"],
     "farewell"               : "Thanks for using this calculator! Bye!"
   },
 
   "es": {
-    "welcome"                : "¡Bienvenido a esta calculadora! Puede sumar, restar, multiplicar y dividir dos números.",
+    "welcome"                : "¡Bienvenido a esta calculadora! Puede sumar(+), restar(-), multiplicar(*) y dividir(/) dos números.",
     "firstNum"               : "¿Cuál es el primer número?",
     "secondNum"              : "¿Cuál es el segundo número?",
     "operation"              : "¿Qué operación le gustaría realizar?",
     "askNumAgain"            : "Lo siento, ese no era un número. Intentar otra vez",
     "canNotDivideZero"       : "No se puede dividir por cero",
     "invalidOperation"       : "Operación inválida",
+    "theResultIs"            : "El resultado es",
+    "somethingWentWrong"     : "Algo salió mal",
     "askOperatorAgain"       : "Lo siento, no conocemos esa operación. Intentar otra vez",
     "askKeepGoingAgain"      : "Lo siento, no entendí eso. Escriba 's' o 'n'",
     "askAnotherCalculation"  : "¿Quieres otro cálculo? (s / n)",
+    "yesNoResponses"         : ["si", "s", "no", "n"],
     "farewell"               : "¡Gracias por usar esta calculadora! ¡Chau!"
   }
 }
