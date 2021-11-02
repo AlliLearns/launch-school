@@ -1,5 +1,3 @@
-// TODO: Move valid answers to the JSON file. 
-
 const readLine = require('../../node_modules/readline-sync');
 const MESSAGES = require('./calculator_messages.json');
 
