@@ -22,5 +22,5 @@
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 01.11.2021 M | JS101-03 | 2000 - 2030 | Completed `questions 1 - 4` of assignment 2. |
-| 02.11.2021 T | JS101-02 | 1300 - 1400 | Refactored `calculator.js` for feedback. |
+| 02.11.2021 T | JS101-02 <br> JS101-03 | 1300 - 1400 <br> 1430 - 0000 | Refactored `calculator.js` for feedback. <br> - |
 <!-- |  |  |  |  | -->
