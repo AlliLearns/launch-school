@@ -1,30 +1,13 @@
-// Consider the following object: 
-let flintstones = { 
-  Fred: 0,
-  Wilma: 1, 
-  Barney: 2, 
-  Betty: 3, 
-  Bambam: 4,
-  Pebbles: 5,
- };
+// Determine whether the name 'Dino' appears in the 
+// strings below - check each string separately.
 
-// Create an array from this 
-// object that contains only 
-// two elements: 
-// Barney's name and number
+let str1 = "Few things in life are as important as house training your pet dinosaur.";
+let str2 = "Fred and Wilma have a pet dinosaur named Dino.";
 
-let barney = [];
+// ---------------------------------
 
-Object.entries(flintstones).forEach( element => {
-  const [key, _] = element;
-  if (key === "Barney") {
-    barney = element;
-  }
-})
+console.log(str1.includes('Dino'));
+console.log(str2.includes('Dino'));
 
-console.log(barney);
-
-// Their solution
-const barney2 = Object.entries(flintstones).filter(pair => pair[0] === "Barney").shift();
-console.log(barney2);
-
+console.log(str1.match('Dino')) !== null;
+console.log(str2.match('Dino')) !== null;

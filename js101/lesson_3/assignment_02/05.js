@@ -1,9 +1,16 @@
-// Given an array of numbers, [1, 2, 3, 4, 5]
-// mutate the array by removing the number at 
-// index 2, so that they array becomes 
-// [1, 2, 4, 5]
+// What will the following code output?
 
-const numbers = [1, 2, 3, 4, 5];
+console.log(false == '0');  // true
+console.log(false === '0'); // false
 
-numbers.splice(2, 1);
-console.log(numbers);
+// ---------------------------------
+
+/*
+  Since the first operation uses loose equality, 
+  the boolean value gets coerced into its number 
+  equivalent (0), and the string gets coerced 
+  into its number equivalent (0). 
+
+  Strict equality compares values without type
+  coercion, leading to the result of 'false.'
+*/ 

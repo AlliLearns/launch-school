@@ -1,29 +1,9 @@
-// The following function unnecessarily 
-// uses two `return` statements to return
-// boolean values. Can you rewrite this 
-// function so it only has one `return`
-// statement and does not explicitly 
-// use either `true` or `false`
+// Given an array of numbers, [1, 2, 3, 4, 5]
+// mutate the array by removing the number at 
+// index 2, so that they array becomes 
+// [1, 2, 4, 5]
 
-function isColorValid(color) {
-  if (color === "blue" || color === "green") {
-    return true;
-  } else {
-    return false;
-  }
-}
+const numbers = [1, 2, 3, 4, 5];
 
-// Try to come up with at least two different solutions.
-
-// --------------------------------------------
-
-function isColorValid(color) {
-  return color === "blue" || color === "green";
-}
-
-// I had to look at their solutions.
-// Couldn't think of a second one. 
-
-const isValidColor = color => color === "blue" || color === "green";
-
-const isValidColor2 = color => ["blue", "green"].includes(color);
+numbers.splice(2, 1);
+console.log(numbers);

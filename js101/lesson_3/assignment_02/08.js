@@ -1,9 +1,8 @@
-// How would you check whether the objects
-// assigned to variables `numbers` and 
-// `table` below are arrays? 
+// How can we add the family pet, "Dino"
+// to the following array? 
 
- let numbers = [1, 2, 3, 4,];  // true
- let table = {field1: 1, field2: 2, field3: 3, field4: 4}; // false
+let flintstones = ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles"];
 
- console.log(Array.isArray(numbers));
- console.log(Array.isArray(table));
+// ---------------------------------
+
+flintstones.push('Dino');

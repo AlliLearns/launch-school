@@ -1,9 +1,9 @@
-// Starting with the string 
-let famousWords = "seven years ago...";
+// Using the following string, create a new string 
+// that contains all lowercase letters except for 
+// the first character, which should be capitalized. 
 
-// Show two different ways to put the 
-// expected "Four score and" in front of it. 
+let munstersDescription = "the Munsters are CREEPY and Spooky.";
 
-const first = "Four score and "
-console.log(first + famousWords);
-console.log(first.concat(famousWords));
+// ---------------------------------
+
+console.log(munstersDescription.charAt(0).toUpperCase() + munstersDescription.slice(1).toLowerCase());

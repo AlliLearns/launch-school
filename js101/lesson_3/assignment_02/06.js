@@ -1,24 +1,13 @@
-// Suppose we build an array like this
+// We have most of the Munster family in our 
+// ages object: 
 
-let flintstones = ["Fred", "Wilma"];
-flintstones.push(["Barney", "Betty"]);
-flintstones.push(["Bambam", "Pebbles"]);
+let ages = { Herman: 32, Lily: 30, Grandpa: 5843, Eddie: 10 };
 
-// This code will create a nested array
-// that looks like this: 
-// ["Fred", "Wilma", ["Barney", "Betty"], ["Bambam", "Pebbles"]]
+// Add entries for Marilyn and Spot to the object: 
 
-// Nesting data structures like we do here
-// is commonplace in JavaScript and programming
-// in general. We'll explore this in greater depth
-// in later lessons.
+let additionalAges = { Marilyn: 22, Spot: 237 };
 
-// Create a new array that contains all of the 
-// values but without the nested format. 
-
-// ------------------------------
+// ---------------------------------
 
 
-console.log([].concat(...flintstones));
-// Their solution
-console.log(flintstones.flat());
+console.log(Object.assign(ages, additionalAges));

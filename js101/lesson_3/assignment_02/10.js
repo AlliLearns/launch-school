@@ -1,14 +1,17 @@
-// Write two one-line expressions to
-// count the number of lower-case `t`
-// characters in each of the following 
-// strings 
+// Return a new version of this sentence that ends just 
+// before the word `house`. Don't worry about spaces 
+// or punctuation: remove everything starting from the 
+// beginning of `house` to the end of the sentence. 
 
-let statement1 = "The Flintstones Rock!"
-let statement2 = "Easy come, easy go.";
+let advice = "Few things in life are as important as house training your pet dinosaur.";
 
-console.log(statement1.split('').filter(char => char === 't').length);
-console.log(statement2.split('').filter(char => char === 't').length);
+// Expected return value:
+// => 'Few things in life are as important as '
 
-// My first solution was to use 'matchAll'
-// but I didn't understand what it was 
-// returning. 
+// ---------------------------------
+
+console.log(advice.substring(0, 39));
+
+// Their solution
+console.log(advice.slice(0, advice.indexOf('house')));
+

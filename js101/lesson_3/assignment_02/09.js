@@ -1,17 +1,14 @@
-// Before CSS we used spaces to align 
-// things on the screen. If we have a 
-// 40-character wide table of 
-// Flintstone family members
-// how can we center the following
-// title above the table with spaces? 
+// In the previous problem, our first 
+// answer added "Dino" to the array 
+// like this: 
 
-let title = "Flintstone family members";
+let flintstones = ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles"];
+// flintstones.push("Dino");
+
+// How can we add multiple items to our 
+// array? ('Dino' and 'Hoppy')
 
 // ---------------------------------
 
-let padding = Math.floor((title.length / 2) + 20);
-const centeredTitle = title.padStart(padding, ' ');
-
-console.log(centeredTitle);
-console.log(''.padStart(40, '-'));
-
+flintstones.push('Dino', 'Hoppy');
+console.log(flintstones);
