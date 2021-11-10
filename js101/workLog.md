@@ -24,5 +24,21 @@
 | 01.11.2021 M | JS101-03 | 2000 - 2030 | Completed `questions 1 - 4` of assignment 2. |
 | 02.11.2021 T | JS101-02 <br> JS101-03 | 1300 - 1400 <br> 1430 - 1500| Refactored `calculator.js` for feedback. <br> Completed `questions 5 - 10` of assignment 2. |
 | 03.11.2021 W | Nothing | - | - |
-| 04.11.2021 R | JS101-03 | 1215 - 1400 <br> 1945 - 2030 | Completed `questions 1 - 10` of assignment 2. <br> Completed `questions 1 - 5` of assignment 3. |
+| 04.11.2021 R | JS101-03 | 1215 - 1400 <br> 1945 - 2030 | Completed `questions 1 - 10` of assignment 3. <br> Completed `questions 1 - 5` of assignment 4. |
+| 05.11.2021 F | Nothing | - | - |
+| 06.11.2021 S | JS101-03 | 1000 - 1100 | Noted study topics from `assignments 2 - 4`. |
+| 07.11.2021 U | Nothing | - | - |
+<!-- |  |  |  |  | -->
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 03
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 08.11.2021 | - <br> JS101-03 | 0900 - 1000 <br> 1200 - 1345 | Re-read the pedagogy after a week of health issues. <br> Worked along with a live code session. |
+| 09.11.2021 | Self-study | 1215 - 1315 | Studied strings and some string methods. |
+| 10.11.2021 | Self-study | 0745 - 1000 <br> 1000 - 1100 | Created a reference for common `string methods`. <br> Started a reference for common `array methods`. |
 <!-- |  |  |  |  | -->
