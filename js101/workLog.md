@@ -38,7 +38,8 @@
 ## Week 03
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
-| 08.11.2021 | - <br> JS101-03 | 0900 - 1000 <br> 1200 - 1345 | Re-read the pedagogy after a week of health issues. <br> Worked along with a live code session. |
-| 09.11.2021 | Self-study | 1215 - 1315 | Studied strings and some string methods. |
-| 10.11.2021 | Self-study | 0745 - 1000 <br> 1000 - 1100 | Created a reference for common `string methods`. <br> Started a reference for common `array methods`. |
+| 08.11.2021 M | - <br> JS101-03 | 0900 - 1000 <br> 1200 - 1345 | Re-read the pedagogy after a week of health issues. <br> Worked along with a live code session. |
+| 09.11.2021 T | Self-study | 1215 - 1315 | Studied strings and some string methods. |
+| 10.11.2021 W | Self-study | 0745 - 1000 <br> 1000 - 1100 <br> 1315 - 1500 | Created a reference for common `string methods`. <br> Created a reference for common `array methods`. <br> Worked on filling in `array mutation methods`. |
+| 11.11.2021 R | Self-study | 0530 - 0630 | Created a reference for common `object methods`. |
 <!-- |  |  |  |  | -->
