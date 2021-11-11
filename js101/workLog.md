@@ -55,5 +55,5 @@
 | 08.11.2021 M | - <br> Self-study | 0900 - 1000 <br> 1200 - 1345 | Re-read the pedagogy after a week of health issues. <br> Worked along with a live code session. |
 | 09.11.2021 T | Self-study | 1215 - 1315 | Studied strings and some string methods. |
 | 10.11.2021 W | Self-study | 0745 - 1000 <br> 1000 - 1100 <br> 1315 - 1500 | Created a reference for common `string methods`. <br> Created a reference for common `array methods`. <br> Worked on describing `array mutation methods`. |
-| 11.11.2021 R | Self-study <br> JS101-03 <br> - | 0530 - 0630 <br> 0700 - 0830 <br> - | Created a reference for common `object methods`. <br> Completed `questions 1 - 10` of assignment 5. <br> - |
+| 11.11.2021 R | Self-study <br> JS101-03 <br> - | 0530 - 0630 <br> 0700 - 0830 <br> 1100 - 0000 | Created a reference for common `object methods`. <br> Completed `questions 1 - 10` of assignment 5. <br> - |
 <!-- |  |  |  |  | -->
