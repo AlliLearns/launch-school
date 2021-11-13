@@ -84,4 +84,5 @@
 | 10.11.2021 W | Self-study | 0745 - 1000 <br> 1000 - 1100 <br> 1315 - 1500 | Created a reference for common `string methods`. <br> Created a reference for common `array methods`. <br> Worked on describing `array mutation methods`. |
 | 11.11.2021 R | Self-study <br> JS101-03 <br> JS101-03 <br> JS101-04 <br> JS101-04 <br> JS101-04 | 0530 - 0630 <br> 0700 - 0830 <br> 1100 - 1130 <br> 1215 - 1315 <br> 1615 - 1715 <br> 1800 - 1930 | Created a reference for common `object methods`. <br> Completed `questions 1 - 10` of assignment 5. <br> Completed `questions 1 - 4` of assignment 6. <br> Read `assignments 1 - 4`. <br> Read and worked with `assignment 5`. <br> Completed `assignment 6`. |
 | 12.11.2021 F | JS101-04 <br> JS101-04 <br> JS101-04 <br> JS101-05 | 0630 - 0730 <br> 0730 - 0830 <br> 0830 - 0930 <br> 1045 - 1145 | Read `assignments 7 - 10`. <br> Completed `questions 1 - 11` of assignment 11. <br> Completed `Quiz 3`. <br> Read `assignments 1 - 4`. |
+| 13.11.2021 S | JS101-05 | 0645 - 1330 <br> 1515 - 1645 | Re-read `assignment 4` and created my own method. <br> Worked through the rest `assignment 4` examples. |
 <!-- |  |  |  |  | -->
