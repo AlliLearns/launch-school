@@ -38,7 +38,7 @@ function generateUUID() {
   
   hexLengths.forEach(len => {
     const maxValue = determineMax(len);
-    const value = Math.floor(Math.random() * maxValue);
+    let value = Math.floor(Math.random() * maxValue);
     let hexValue = makeHexString(value);
     
     // Could also pad the start with 0s...but I don't know if that's allowed in UUIDs.
