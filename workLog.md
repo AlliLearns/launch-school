@@ -12,7 +12,7 @@
 <br>
 <hr>
 
-## Week 01
+## Week 00
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 15.10.2021 F | LS95-01 | 0800 - 1600 <br> 1830 - 2115 | Worked through sections 1 - 18. Skipped section 13. <br> Worked through sections 19 and 20. | 
@@ -24,7 +24,7 @@
 <br>
 <hr>
 
-## Week 02
+## Week 01
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 18.10.2021 M | JS100-01 | 0845 - 1000 <br> 1045 - 1130 <br> 1200 - 1215 <br> 1230 - 1300 <br> 1600 - 1800 <br> 1900 - 1930 <br> 1945 - 2015 | Read through `Introduction`. Read it again and took notes. <br> Read through but did not take notes on `Preparations`. <br> Did the exercises in `Preparations`. <br> Read through but did not take notes on `The Basics`. <br> Did exercises 1 and 2. Made exercise 2 more challenging. <br> Did the rest of chapter 3 exercises. <br> Took notes on data types in chapter 3. |
@@ -42,11 +42,60 @@
 <br>
 <hr>
 
-## Week 03
+## Week 02
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 25.10.2021 M | LS95-01 | 1600 - 1800 <br> 1900 - 1930 | Took notes from videos 1 - 4 of Section 19. <br> Took notes from video 5 of Section 19. |
 | 26.10.2021 T | LS95-01 | 0900 - 1000 | Took notes from video 6 of Section 19. |
+| 27.10.2021 W | JS101-01 <br> JS101-p01 | 2015 - 2130 <br> 2130 - 2200 | Read through `assignments 1 - 13`. <br> Worked through `Small Problems: Easy01` problems 1 - 4. |
+| 28.10.2021 R | JS101-01 <br> JS101-02 | 0745 - 0815 <br> 1430 - 1645 | Completed `Quiz 1`. <br> Read and took notes on `assignment 4`. |
+| 29.10.2021 F | JS101-02 | 0530 - 0600 <br> 0600 - 0630 <br> 0630 - 0730 <br> 1815 - 1845 <br> 1845 - 1930 | Completed `calculator.js` (assignment 5). <br> Read through `assignments 6 - 8`. <br> Completed `calculator.js` refactor (assignment 9). <br> Read through `assignments 10 - 13`. <br> Made an overview of `assignments 1 - 13`. |
+| 30.10.2021 S | JS101-02 | 0715 - 0800 <br> 0900 - 0945 <br> 1100 - 1115 <br> 1415 - 1800 <br> 1945 - 2015 <br> 2015 - 2100 | Read through `assignment 14`. <br> Read through `assignments 15 - 18`. <br> Completed `eslint install` (assignment 8). <br> Worked through `mortgage.js` (assignment 19). <br> Read through `assignment 20`. <br> Read through some forum questions. |
+| 31.10.2021 U | JS101-02 | 0730 - 0830 <br> 0830 - 0930 <br> 1115 - 1130 <br> 1145 - 1345 <br> 1400 - 1600 <br> 1600 - 1645 <br> 1900 - 2000 | Read through `assignments 21 - 23`. <br> Completed `rps.js` (assignment 24). <br> Read through `assignment 25`. <br> Completed `calculator.js` bonus (assignment 16). <br> Completed `rps.js` bonus (assignment 26). <br> Completed `Quiz 2`. <br> Refactored `calculator.js` for review. |
+<!-- |  |  |  |  | -->
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 03
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 01.11.2021 M | JS101-03 | 2000 - 2030 | Completed `questions 1 - 4` of assignment 2. |
+| 02.11.2021 T | JS101-02 <br> JS101-03 | 1300 - 1400 <br> 1430 - 1500| Refactored `calculator.js` for feedback. <br> Completed `questions 5 - 10` of assignment 2. |
+| 03.11.2021 W | Nothing | - | - |
+| 04.11.2021 R | JS101-03 | 1215 - 1400 <br> 1945 - 2030 | Completed `questions 1 - 10` of assignment 3. <br> Completed `questions 1 - 5` of assignment 4. |
+| 05.11.2021 F | Nothing | - | - |
+| 06.11.2021 S | JS101-03 | 1000 - 1100 | Noted study topics from `assignments 2 - 4`. |
+| 07.11.2021 U | Nothing | - | - |
+<!-- |  |  |  |  | -->
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 04
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 08.11.2021 M | - <br> Self-study | 0900 - 1000 <br> 1200 - 1345 | Re-read the pedagogy after a week of health issues. <br> Worked along with a live code session. |
+| 09.11.2021 T | Self-study | 1215 - 1315 | Studied strings and some string methods. |
+| 10.11.2021 W | Self-study | 0745 - 1000 <br> 1000 - 1100 <br> 1315 - 1500 | Created a reference for common `string methods`. <br> Created a reference for common `array methods`. <br> Worked on describing `array mutation methods`. |
+| 11.11.2021 R | Self-study <br> JS101-03 <br> JS101-03 <br> JS101-04 <br> JS101-04 <br> JS101-04 | 0530 - 0630 <br> 0700 - 0830 <br> 1100 - 1130 <br> 1215 - 1315 <br> 1615 - 1715 <br> 1800 - 1930 | Created a reference for common `object methods`. <br> Completed `questions 1 - 10` of assignment 5. <br> Completed `questions 1 - 4` of assignment 6. <br> Read `assignments 1 - 4`. <br> Read and worked with `assignment 5`. <br> Completed `assignment 6`. |
+| 12.11.2021 F | JS101-04 <br> JS101-04 <br> JS101-04 <br> JS101-05 | 0630 - 0730 <br> 0730 - 0830 <br> 0830 - 0930 <br> 1045 - 1145 | Read `assignments 7 - 10`. <br> Completed `questions 1 - 11` of assignment 11. <br> Completed `Quiz 3`. <br> Read `assignments 1 - 4`. |
+| 13.11.2021 S | JS101-05 | 0645 - 1330 <br> 1515 - 1645 | Re-read `assignment 4` and created my own method. <br> Worked through the rest of `assignment 4` examples. |
+| 14.11.2021 U | JS101-05 | 0630 - 0915 <br> 1215 - 1315 | Completed `problems 1 - 12` of assignment 5. <br> Completed `problems 13 - 14` of assignment 5. |
 <!-- |  |  |  |  | -->
 
 
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 05
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 15.11.2021 M | JS101-05 | 0600 - 0745 | Completed `problems 15 - 17` of assignment 5. |
+<!-- |  |  |  |  | -->
