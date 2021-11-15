@@ -10,6 +10,7 @@
 
 ### `str.trim()`
 - Returns new str, whitespace gone from both ends of `str`.
+- (Useful when obtaining input from users.)
 
 ### `str.trimStart()`
 - Returns new string, whitespace gone from start of `str`.

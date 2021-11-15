@@ -55,6 +55,35 @@
 - Mutates `arr`.
 - 
 
+### `arr.map(callback(element [, index [, array]]), [, thisArg])`
+- Non-mutating in itself, but `callback` can mutate. 
+- `callback` is called on every array element.
+- `element` is the current array element in `callback`.
+- `index` optionally passes the index of the element.
+- `array` optionally passes array this was called on.
+- `thisArg` optionally sets `this` context for `callback`.
+- If `thisArg` is omitted, defaults to `undefined`.
+- Returns a new array constructed from the callback's return values.
+- The returned array is the same length as `arr`.
+- If `callback` omits an explicit return, the new array contains `undefined`.
+- Don't use `map` if you're not going to use the new array.
+
+### `arr.sort([compareFn(firstEl, secondEl)])`
+- Mutating. 
+- `compareFn(...)` is an optional callback.
+- If `compareFn(...)` is omitted: 
+  - Array elements are converted into strings. 
+  - Then sorted by their ascending UTF-16 values.
+  - All `undefined` values are placed at the end.
+- `firstEl` or `a` is the current element of the array.
+- `secondEl` or `b` is the next element of the array. 
+- `compareFn(...)` needs to return a numerical value.
+  - return a number `< 0` if `a` will be before `b`.
+  - return a number `> 0` if `a` will be after `b`.
+  - return `0` if `a` and `b` are the same. 
+- The sorted array is returned.
+
+
 ### `arr.fill(value [, start [, end]])`
 - Mutates `arr`. 
 - Fills `arr` with `value` from `start` to `end - 1`.
@@ -88,6 +117,14 @@
 ## Array Searching
 ### `arr.includes(searchElement [, fromIndex])`
 ### `arr.indexOf(searchElement [, fromIndex])`
+- `searchElement` is the element we should look for.
+- `fromIndex` is optional starting index.
+- If `fromIndex` is omitted, defaults to 0.
+- If `fromIndex` is negative, will search up to value.
+- If `fromIndex` is negative, will still search front to back.
+- Returns the first index of a strict match.
+- Returns -1 if not found. 
+
 ### `arr.lastIndexOf(searchElement [, fromIndex])`
 
 <br>
@@ -96,6 +133,19 @@
 ### `arr.entries()`
 ### `arr.keys()`
 ### `arr.values()`
+### `arr.filter(callback(element [, index [, array]]), [, thisArg])`
+- Non-mutating in itself, but `callback` can mutate. 
+- `callback` is called on every array element.
+- `element` is the current array element in `callback`.
+- `index` optionally passes the index of the element.
+- `array` optionally passes array this was called on.
+- `thisArg` optionally sets `this` context for `callback`.
+- If `thisArg` is omitted, defaults to `undefined`.
+- Looks at truthy value of `callback`'s return. 
+- If truthy, `element` is added to a new array.
+- If falsey, `element` is not added to new array. 
+- The new array is returned by `filter`.
+
 
 <br>
 
@@ -109,7 +159,6 @@
 ## Not Classified Yet
 ### `arr.every(callback(element [, index [, array]]), [, thisArg])`
 
-### `arr.filter(callback(element [, index [, array]]), [, thisArg])`
 
 ### `arr.find(callback(element [, index [, array]]), [, thisArg])`
 
@@ -118,8 +167,7 @@
 ### `arr.flatMap(callback(currentValue [, index [, array]]), [, thisArg])`
 
 ### `arr.forEach(callback(element [, index [, array]]), [, thisArg])`
-
-### `arr.map(callback(element [, index [, array]]), [, thisArg])`
+- Returns `undefined`. It can't be chained. 
 
 ### `arr.reduce(callback(previousValue [, currentValue [, currentIndex, [, array]]]), [, initialValue])`
 
@@ -127,7 +175,7 @@
 
 ### `arr.some(callback(element [, index [, array]]), [, thisArg])`
 
-### `arr.sort(compareFn(firstEl, secondEl))`
+
 
 <hr>
 <br>
