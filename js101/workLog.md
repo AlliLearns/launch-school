@@ -44,7 +44,7 @@
 <hr>
 
 
-## Week 01
+## Week 00
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 27.10.2021 W | JS101-01 <br> JS101-p01 | 2015 - 2130 <br> 2130 - 2200 | Read through `assignments 1 - 13`. <br> Worked through `Small Problems: Easy01` problems 1 - 4. |
@@ -59,7 +59,7 @@
 <br>
 <hr>
 
-## Week 02
+## Week 01
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 01.11.2021 M | JS101-03 | 2000 - 2030 | Completed `questions 1 - 4` of assignment 2. |
@@ -76,7 +76,7 @@
 <br>
 <hr>
 
-## Week 03
+## Week 02
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 08.11.2021 M | - <br> Self-study | 0900 - 1000 <br> 1200 - 1345 | Re-read the pedagogy after a week of health issues. <br> Worked along with a live code session. |
@@ -84,5 +84,18 @@
 | 10.11.2021 W | Self-study | 0745 - 1000 <br> 1000 - 1100 <br> 1315 - 1500 | Created a reference for common `string methods`. <br> Created a reference for common `array methods`. <br> Worked on describing `array mutation methods`. |
 | 11.11.2021 R | Self-study <br> JS101-03 <br> JS101-03 <br> JS101-04 <br> JS101-04 <br> JS101-04 | 0530 - 0630 <br> 0700 - 0830 <br> 1100 - 1130 <br> 1215 - 1315 <br> 1615 - 1715 <br> 1800 - 1930 | Created a reference for common `object methods`. <br> Completed `questions 1 - 10` of assignment 5. <br> Completed `questions 1 - 4` of assignment 6. <br> Read `assignments 1 - 4`. <br> Read and worked with `assignment 5`. <br> Completed `assignment 6`. |
 | 12.11.2021 F | JS101-04 <br> JS101-04 <br> JS101-04 <br> JS101-05 | 0630 - 0730 <br> 0730 - 0830 <br> 0830 - 0930 <br> 1045 - 1145 | Read `assignments 7 - 10`. <br> Completed `questions 1 - 11` of assignment 11. <br> Completed `Quiz 3`. <br> Read `assignments 1 - 4`. |
-| 13.11.2021 S | JS101-05 | 0645 - 1330 <br> 1515 - 1645 | Re-read `assignment 4` and created my own method. <br> Worked through the rest `assignment 4` examples. |
+| 13.11.2021 S | JS101-05 | 0645 - 1330 <br> 1515 - 1645 | Re-read `assignment 4` and created my own method. <br> Worked through the rest of `assignment 4` examples. |
+| 14.11.2021 U | JS101-05 | 0630 - 0915 <br> 1215 - 1315 | Completed `problems 1 - 12` of assignment 5. <br> Completed `problems 13 - 14` of assignment 5. |
+<!-- |  |  |  |  | -->
+
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 03
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 15.11.2021 M | JS101-05 | 0600 - 0745 | Completed `problems 15 - 17` of assignment 5. |
 <!-- |  |  |  |  | -->
