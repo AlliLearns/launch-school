@@ -1,86 +1,104 @@
-// Build a mortgage calculator
-// It'll take information from the user and print the expected
-// monthly payment in dollar format [ $123.45 ].
-// The three pieces of information it'll take from the user are:
-//    - The loan amount
-//    - The Annual Percentage Rate (APR)
-//    - The loan duration (in years)
-
-// You can use the formula [ m = p * (j / (1 - Math.pow((1 + j), (-n)))); ]
-// Where:
-//    - m = monthly payment
-//    - p = loan amount
-//    - j = monthly interest rate
-//    - n = loan duration in months
-// You'll have to calculate j from APR and n from the loan duration.
-
-
 const readLine = require('../../node_modules/readline-sync');
+const MESSAGES = require('./mortgage_messages.json');
+
+const MONTHS_IN_YEAR = 12;
+const MAX_PERCENT = 100;
+const MAX_DECIMAL_PERCENT = 1;
+
+greetUser();
+runCalculator();
+farewellUser();
+
+function greetUser() {
+  printHeader(MESSAGES.welcome);
+  waitForUser(MESSAGES.getStartedPrompt);
+}
+
+function farewellUser() {
+  printHeader(MESSAGES.farewell);
+  waitForUser(MESSAGES.exitPrompt);
+}
+
+function printHeader(message) {
+  const border = `-`.repeat(message.length);
+
+  console.clear();
+  console.log(border);
+  console.log(message);
+  console.log(border);
+}
+
+function waitForUser(message) {
+  console.log(`\n`);
+  readLine.question(message);
+  console.clear();
+}
+
+function runCalculator() {
+  let keepGoing = false;
+  do {
+    const [loan, apr, years] = getUserInput();
+
+    const monthlyPayment = calcMonthlyPayment(loan, apr, years);
+    console.log(formatResult(monthlyPayment));
+
+    console.log(`\n\n`);
+
+    keepGoing = shouldGoAgain(MESSAGES.askAnotherCalculation);
+    console.clear();
+
+  } while (keepGoing);
+}
 
 
-// Main loop logic
-let keepGoing = false;
-do {
-  const [loan, apr, years] = getUserInput();
-
-  console.log(getMonthlyPayment(loan, apr, years));
-
-  keepGoing = askUser("Do you want do another calculation?");
-
-} while (keepGoing);
-
-// Attain and validate user input
 function getUserInput() {
-  const loanTotal = getLoanTotal("Provide your total loan amount");
-  const annualPercentageRate = getAPR("Provide your APR");
-  const years = getLoanDuration("Provide your loan duration in years");
+  const loan = validateInput(
+    MESSAGES.promptForLoan,
+    MESSAGES.promptLoanAgain,
+    invalidLoan);
 
-  return [loanTotal, annualPercentageRate, years];
+  const apr = validateInput(
+    MESSAGES.promptForAPR,
+    MESSAGES.promptAPRAgain,
+    invalidAPR);
+
+  const years = validateInput(
+    MESSAGES.promptForDuration,
+    MESSAGES.promptDurationAgain,
+    invalidDuration);
+
+  return [loan, apr, years];
 }
 
-function getLoanTotal(message) {
-  let loan = readLine.question(`${prompt()} ${message}:\n`);
-  loan = stripSymbol(loan, ',');
+function validateInput(inputAskStr, askAgainStr, validationCallback) {
+  let value = prompt(`${inputAskStr}`);
+  value = stripInput(value);
 
-  while (invalidNumber(loan)) {
-    loan = readLine.question(`${prompt()} Sorry, we need a number. Try again.\n`);
-    loan = stripSymbol(loan, ',');
+  while (validationCallback(value)) {
+    value = prompt(`${askAgainStr}`);
+    value = stripInput(value);
   }
 
-  return Number(loan);
+  return Number(value);
 }
 
-function getAPR(message) {
-  let apr = readLine.question(`${prompt()} ${message}:\n`);
-  apr = stripSymbol(apr, '%');
-
-  while (invalidAPR(apr)) {
-    apr = readLine.question(`${prompt()} Sorry, we need a number between 0 and 100 or 0 and 1. Try again.\n`);
-    apr = stripSymbol(apr, '%');
-  }
-
-  return Number(apr);
-}
-
-function getLoanDuration(message) {
-  let duration = readLine.question(`${prompt()} ${message}:\n`);
-
-  while (invalidDuration(duration)) {
-    duration = readLine.question(`${prompt()} Sorry, we need at least one month. Try again.\n`);
-  }
-
-  return Number(duration);
+function invalidLoan(loan) {
+  if (invalidNumber(loan)) return true;
+  if (Number(loan) <= 0) return true;
+  return false;
 }
 
 function invalidAPR(apr) {
   if (invalidNumber(apr)) return true;
-  if (apr > 100 || (apr / 100) > 1) return true;
+  if (apr > MAX_PERCENT) return true;
+  if ((apr / MAX_PERCENT) > MAX_DECIMAL_PERCENT) return true;
+
   return false;
 }
 
 function invalidDuration(dur) {
   if (invalidNumber(dur)) return true;
-  if (dur < (1 / 12)) return true;
+  if (Number(dur) < (1 / MONTHS_IN_YEAR)) return true;
   return false;
 }
 
@@ -88,21 +106,26 @@ function invalidNumber(num) {
   return num.trim() === '' || Number.isNaN(Number(num)) || Number(num) < 0;
 }
 
-function stripSymbol(str, symbol) {
-  const sym = new RegExp(symbol, "g");
-  return str.replace(sym, '');
+function stripInput(str) {
+  const invalidSymbols = [',', '$', '%', 'yr', 'years', 'year'];
+  str = str.trim();
+
+  for (let index = 0; index < invalidSymbols.length; index++) {
+    str = stripSymbol(str, invalidSymbols[index]);
+  }
+
+  return str;
 }
 
-// Calculate and print monthly payment
-function getMonthlyPayment(loanTotal, apr, loanDuration) {
-  const monthlyPayment = calcMonthlyPayment(loanTotal, apr, loanDuration);
-  return formatMoneyValue(monthlyPayment);
+function stripSymbol(str, symbol) {
+  return str.replaceAll(symbol, '');
 }
+
 
 function calcMonthlyPayment(loanTotal, apr, durationYears) {
   const monthlyInterestRate = calcMonthlyInterestRate(apr);
 
-  const durationMonths = durationYears * 12;
+  const durationMonths = durationYears * MONTHS_IN_YEAR;
 
   const dividend = (1 - Math.pow((1 + monthlyInterestRate), (-durationMonths)));
   return loanTotal * (monthlyInterestRate / dividend);
@@ -114,34 +137,43 @@ function calcMonthlyInterestRate(apr) {
   // given APR was in percentages or decimal equivalent.
   // Expects 0 to 1
 
-  if (apr <= 1 ) {
-    return apr / 12;
+  if (apr <= MAX_DECIMAL_PERCENT ) {
+    return apr / MONTHS_IN_YEAR;
   } else {
-    return (apr / 100) / 12;
+    return (apr / MAX_PERCENT) / MONTHS_IN_YEAR;
   }
 }
 
-function formatMoneyValue(num) {
-  return `$${num.toFixed(2)}`;
+function formatResult(monthlyPayment) {
+  monthlyPayment = monthlyPayment.toLocaleString('en', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
+  return `\nYou'll owe ${monthlyPayment} per month.`;
 }
 
-// Ask user if they want to keep going
-function askUser(message) {
-  let answer = readLine.question(`${prompt()} ${message}\n`).toLowerCase();
 
-  while (!yesOrNo(answer)) {
-    answer = readLine.question(`${prompt()} Type 'y' or 'n'.\n`).toLowerCase();
+function shouldGoAgain(message) {
+  let answer = prompt(`${message}`).toLowerCase();
+
+  while (!validateContinue(answer)) {
+    answer = prompt(`Type 'y' or 'n'`).toLowerCase();
   }
 
-  return answer[0] !== 'n'; 
+  return answer[0] !== 'n';
 }
 
-function yesOrNo(answer) {
-  const acceptedYes = ['yes', 'y', 'yea', 'yep'];
-  const acceptedNo = ['no', 'n', 'nah', 'nope'];
-  return acceptedYes.includes(answer) || acceptedNo.includes(answer);
+function validateContinue(answer) {
+  const acceptedAnswers = ['yes', 'y', 'yea', 'yep', 'yeah', 'no', 'n', 'nah', 'nope'];
+  return acceptedAnswers.includes(answer);
 }
 
-function prompt() {
+
+function prompt(message) {
+  return readLine.question(`${drawPrompt()} ${message}: `);
+}
+
+function drawPrompt() {
   return '=>';
 }

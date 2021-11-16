@@ -1,0 +1,13 @@
+{
+  "welcome":                "Welcome to this Mortgage Calculator!",
+  "getStartedPrompt":       "Press 'enter' to get started!",
+  "farewell":               "Thanks for using Mortgage Calculator!",
+  "exitPrompt":             "Press 'enter' to exit!", 
+  "promptForLoan":          "Provide your total loan amount",
+  "promptLoanAgain":        "Sorry, we need a number (that's larger than 0). Try again",
+  "promptForAPR":           "Provide your APR in percent or decimal format",
+  "promptAPRAgain":         "Sorry, we need a number between 0 and 100 or 0 and 1. Try again",
+  "promptForDuration":      "Provide your loan duration in years",
+  "promptDurationAgain":    "Sorry, we need a number that's at least one month. Try again",
+  "askAnotherCalculation":  "Do you want do another calculation?"
+}
