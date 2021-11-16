@@ -97,5 +97,6 @@
 ## Week 03
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
-| 15.11.2021 M | JS101-05 <br> -  | 0600 - 0745 <br> 0830 - 0900 | Completed `problems 15 - 17` of assignment 5. <br> Completed `Quiz 4`. |
+| 15.11.2021 M | JS101-05 <br> JS101-05 <br> JS101-06 <br> JS101-06 <br> JS101-06 | 0600 - 0745 <br> 0830 - 0900 <br> 1030 - 1300 <br> 1430 - 1600 <br> 1730 - 2100 | Completed `problems 15 - 17` of assignment 5. <br> Completed `Quiz 4`. <br> Completed `assignments 1 - 4`. <br> Worked on user input portion of `generalTick.js`. <br> Completed `assignments 5 - 6`. |
+| 16.11.2021 T | JS101-06 <br> JS101-02 | 0630 - 0930 <br> 1000 - 0000 | Completed `generalTick.js` with `assignment 7`. <br> - |
 <!-- |  |  |  |  | -->
