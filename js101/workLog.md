@@ -10,7 +10,7 @@
 | 03 | 01.11.2021 | 11.11.2021 | 05 days | 7.5 |
 | 04 | 11.11.2021 | 12.11.2021 | 02 days | 6.5 |
 | 05 | 12.11.2021 | 15.11.2021 | 04 days | 15.75 |
-| 06 |  |  |  |  |
+| 06 | 15.11.2021 |  |  | 10.5 |
 | SS | - | - | 04 | 8.75 |
 <!-- |  |  |  |  |  | -->
 
@@ -19,7 +19,8 @@
 ## Revisited Topics 
 | Lesson | Date | Hours |
 | - | - | - | 
-| 02 | 02.11.2021 | 1 | -->
+| 02 | 02.11.2021 | 1 | 
+| 02 | 16.11.2021 | 4 | -->
 <!-- |  |  |  | -->
 
 <!-- <br>
@@ -98,5 +99,5 @@
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 15.11.2021 M | JS101-05 <br> JS101-05 <br> JS101-06 <br> JS101-06 <br> JS101-06 | 0600 - 0745 <br> 0830 - 0900 <br> 1030 - 1300 <br> 1430 - 1600 <br> 1730 - 2100 | Completed `problems 15 - 17` of assignment 5. <br> Completed `Quiz 4`. <br> Completed `assignments 1 - 4`. <br> Worked on user input portion of `generalTick.js`. <br> Completed `assignments 5 - 6`. |
-| 16.11.2021 T | JS101-06 <br> JS101-02 | 0630 - 0930 <br> 1000 - 0000 | Completed `generalTick.js` with `assignment 7`. <br> - |
+| 16.11.2021 T | JS101-06 <br> JS101-02 <br> JS101-02 <br> JS101-02 <br> JS101-06 | 0630 - 0930 <br> 1000 - 1045 <br> 1200 - 1230 <br> 1230 - 1445 <br> 1500 - 1715 | Completed `generalTick.js` with `assignment 7`. <br> Made a todo list to prepare `mortgage.js` for review. <br> Completed todos for `mortgage.js`. <br> Refactored `mortgage.js` for review. <br> Completed `ticktacktoe.js` from `assignments 3 - 7`. |
 <!-- |  |  |  |  | -->
