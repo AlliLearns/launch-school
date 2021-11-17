@@ -133,8 +133,8 @@ function validChoice(board, choice) {
   return true;
 }
 
-function isANumber(val) {
-  return val !== '' || !Number.isNaN(Number(val));
+function isANumber(str) {
+  return str.trim() !== '' || !Number.isNaN(Number(str));
 }
 
 function withinRange(val, max) {
