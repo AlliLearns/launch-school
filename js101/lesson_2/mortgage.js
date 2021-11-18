@@ -1,4 +1,4 @@
-const readLine = require('../../node_modules/readline-sync');
+const readLine = require('readline-sync');
 const MESSAGES = require('./mortgage_messages.json');
 
 const MONTHS_IN_YEAR = 12;
@@ -16,7 +16,6 @@ function greetUser() {
 
 function farewellUser() {
   printHeader(MESSAGES.farewell);
-  waitForUser(MESSAGES.exitPrompt);
 }
 
 function printHeader(message) {
@@ -98,12 +97,18 @@ function invalidAPR(apr) {
 
 function invalidDuration(dur) {
   if (invalidNumber(dur)) return true;
-  if (Number(dur) < (1 / MONTHS_IN_YEAR)) return true;
+  if (isFloat(dur)) return true;
+  if (Number(dur) < 1) return true;
+
   return false;
 }
 
 function invalidNumber(num) {
   return num.trim() === '' || Number.isNaN(Number(num)) || Number(num) < 0;
+}
+
+function isFloat(num) {
+  return !Number.isInteger(Number(num));
 }
 
 function stripInput(str) {
@@ -123,7 +128,11 @@ function stripSymbol(str, symbol) {
 
 
 function calcMonthlyPayment(loanTotal, apr, durationYears) {
-  const monthlyInterestRate = calcMonthlyInterestRate(apr);
+  if (apr === 0) {
+    return loanTotal / (durationYears * MONTHS_IN_YEAR);
+  }
+
+  const monthlyInterestRate = calcMonthlyInterestDecimal(apr);
 
   const durationMonths = durationYears * MONTHS_IN_YEAR;
 
@@ -131,13 +140,12 @@ function calcMonthlyPayment(loanTotal, apr, durationYears) {
   return loanTotal * (monthlyInterestRate / dividend);
 }
 
-function calcMonthlyInterestRate(apr) {
+function calcMonthlyInterestDecimal(apr) {
   // Input validation already restricted the ranges and format.
   // Now we just need to account for whether the
   // given APR was in percentages or decimal equivalent.
-  // Expects 0 to 1
 
-  if (apr <= MAX_DECIMAL_PERCENT ) {
+  if (apr < MAX_DECIMAL_PERCENT) {
     return apr / MONTHS_IN_YEAR;
   } else {
     return (apr / MAX_PERCENT) / MONTHS_IN_YEAR;

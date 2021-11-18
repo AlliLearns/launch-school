@@ -8,6 +8,6 @@
   "promptForAPR":           "Provide your APR in percent or decimal format",
   "promptAPRAgain":         "Sorry, we need a number between 0 and 100 or 0 and 1. Try again",
   "promptForDuration":      "Provide your loan duration in years",
-  "promptDurationAgain":    "Sorry, we need a number that's at least one month. Try again",
+  "promptDurationAgain":    "Sorry, we need a number that's at least one year. Try again",
   "askAnotherCalculation":  "Do you want do another calculation?"
 }
