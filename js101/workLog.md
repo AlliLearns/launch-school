@@ -2,7 +2,7 @@
 
 <hr>
 
-## First-Pass Totals
+## JS101 Totals
 | Lesson | Start | End | Active | Hours |
 | - | - | - | - | - | 
 | 01 | 27.10.2021 | 28.10.2021 | 02 days | 1.75 |
@@ -10,9 +10,15 @@
 | 03 | 01.11.2021 | 11.11.2021 | 05 days | 7.5 |
 | 04 | 11.11.2021 | 12.11.2021 | 02 days | 6.5 |
 | 05 | 12.11.2021 | 15.11.2021 | 04 days | 15.75 |
-| 06 | 15.11.2021 |  |  | 10.5 |
+| 06 | 15.11.2021 | 18.11.2021 | 04 days | 23.5 |
 | SS | - | - | 04 | 8.75 |
 <!-- |  |  |  |  |  | -->
+
+<br>
+
+## JS109 Totals - Review of JS101
+| Lesson | Date  | Hours |
+| - | - | - |
 
 <!-- <br>
 
@@ -33,9 +39,9 @@
 | 03 | 05 | 7.5 |
 | 04 | 02 | 6.5 |
 | 05 | 04 | 15.75 |
-| 06 | -- | -- |
+| 06 | 04 | 23.5 |
 | SS | -- | 8.75 |
-| F | 20 | 61.5 | -->
+| F | 20 | 85 | -->
 <!-- |  |  |  | -->
 
 
@@ -100,5 +106,6 @@
 | - | - | - | - | 
 | 15.11.2021 M | JS101-05 <br> JS101-05 <br> JS101-06 <br> JS101-06 <br> JS101-06 | 0600 - 0745 <br> 0830 - 0900 <br> 1030 - 1300 <br> 1430 - 1600 <br> 1730 - 2100 | Completed `problems 15 - 17` of assignment 5. <br> Completed `Quiz 4`. <br> Completed `assignments 1 - 4`. <br> Worked on user input portion of `generalTick.js`. <br> Completed `assignments 5 - 6`. |
 | 16.11.2021 T | JS101-06 <br> JS101-02 <br> JS101-02 <br> JS101-02 <br> JS101-06 <br> JS101-06 | 0630 - 0930 <br> 1000 - 1045 <br> 1200 - 1230 <br> 1230 - 1445 <br> 1500 - 1715 <br> 1845 - 1945 | Completed `generalTick.js` with `assignment 7`. <br> Made a todo list to prepare `mortgage.js` for review. <br> Completed todos for `mortgage.js`. <br> Refactored `mortgage.js` for review. <br> Completed `ticktacktoe.js` from `assignments 3 - 7`. <br> Refactored names and structure in `generalTick.js`. |
-| 17.11.2021 W | JS101-06 | 0630 - 1015 <br> 1330 - 1430 | Completed first pass of `twentyOne.js`. <br> Went over their solution in `assignment 10`. |
+| 17.11.2021 W | JS101-06 | 0630 - 1015 <br> 1330 - 1430 <br> 1430 - 1730 | Completed first pass of `twentyOne.js`. <br> Went over their solution in `assignment 10`. <br> Refactored `twentyOne.js` with `lsTwentyOne.js`. |
+| 18.11.2021 R | JS101-06 <br> JS101-06 <br> JS109-01 <br> JS109-01  | 0600 - 0615 <br> 0615 - 0700 <br> 0900 - 0930 <br> 1030 - 1130 | Completed `Quiz 5` <br> Submitted course feedback. <br> Read through `assignments 1 - 3`. <br> Attended my first study group with Antonia. |
 <!-- |  |  |  |  | -->

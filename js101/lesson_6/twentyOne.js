@@ -1,6 +1,6 @@
 const readLine = require('readline-sync');
 
-const ACE   = 1;
+const ACE   = 11;
 const JACK  = 10;
 const QUEEN = 10;
 const KING  = 10;
@@ -8,20 +8,56 @@ const KING  = 10;
 const SUIT_TYPES = ['Hearts', 'Diamonds', 'Spades', 'Clubs'];
 const SUIT = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'JACK', 'QUEEN', 'KING', 'ACE'];
 
+const MAX_SUM = 21;
+const DEALER_MAX = 17;
+
 const WIN = 'win';
 const BUST = 'bust';
+const TIE = 'tie';
 const NO_RESULT = '';
 
 const PLAYER = 'Player';
 const DEALER = 'Dealer';
+
+tests();
+
+function tests() {
+  // const testDeck = initDeck();
+  // const [playerHand, dealerHand] = dealHands(testDeck);
+
+  // const dummyHandAce = [['ACE', 'Clubs'], ['ACE', 'Spades']];
+  // const dummyHandCourt = [['JACK', 'Spades'], ['QUEEN', 'Clubs'], ['KING', 'Diamonds']]
+
+  // console.log(buildCardValueArray(dummyHandCourt));
+  // console.log(sumHand(dummyHandCourt));
+
+  // reportHand(playerHand, PLAYER);
+  // reportHand(dealerHand, DEALER);
+
+  // playRound()
+
+  // runDealerTurn(dealerHand, testDeck);
+
+
+  // const playerBust = [BUST, PLAYER];
+  // const dealerBust = [BUST, DEALER];
+  // const playerWin = [WIN, PLAYER];
+  // const dealerWin = [WIN, DEALER];
+  // const tie = [TIE];
+  // console.log(formulateWinningMessage(playerBust));
+  // console.log(formulateWinningMessage(dealerBust));
+  // console.log(formulateWinningMessage(playerWin));
+  // console.log(formulateWinningMessage(dealerWin));
+  // console.log(formulateWinningMessage(tie));
+}
 
 greetUser();
 runGame();
 farewellUser();
 
 function greetUser() {
-  printHeader("Welcome to Twenty-One!");
-  waitForUser("Hit 'enter' to play.");
+  printHeader(`Welcome to Twenty-One!`);
+  waitForUser(`${drawPrompt()} Hit 'enter' to play.`);
 }
 
 function farewellUser() {
@@ -49,7 +85,10 @@ function runGame() {
   let playAgain = false;
 
   do {
-    runGameLoop();
+    console.clear();
+
+    const roundResult = playRound();
+    printWinningMessage(roundResult);
 
     playAgain = shouldGoAgain("Play again?");
 
@@ -58,24 +97,22 @@ function runGame() {
 
 
 
-function runGameLoop() {
+function playRound() {
   const deck = initDeck();
   const [playerHand, dealerHand] = dealHands(deck);
 
   const knownDealerCard = generateKnownDealerCard(dealerHand);
 
-  reportHands(playerHand, knownDealerCard);
+  reportKnownDealerHand(knownDealerCard);
+  reportHand(playerHand, PLAYER);
 
-  let result = runPlayerTurn(playerHand, deck);
-  let player = PLAYER;
-
-  if (result === NO_RESULT) {
-    result = runDealerTurn(dealerHand, deck);
-    player = DEALER;
+  runPlayerTurn(playerHand, deck);
+  if (winOrBust(playerHand)) {
+    return roundResult(playerHand, dealerHand);
   }
 
-  // let winningMessage = generateWinner(result, player, playerHand, dealerHand);
-  // console.log(winningMessage);
+  runDealerTurn(dealerHand, deck);
+  return roundResult(playerHand, dealerHand);
 }
 
 
@@ -95,8 +132,8 @@ function dealHands(deck) {
   const HAND_SIZE = 2;
 
   for (let i = 0; i < HAND_SIZE; i++) {
-    playerHand.push(removeRandomCard(deck));
-    dealerHand.push(removeRandomCard(deck));
+    drawCard(playerHand, deck);
+    drawCard(dealerHand, deck);
   }
 
   return [playerHand, dealerHand];
@@ -117,212 +154,193 @@ function generateKnownDealerCard(dealerHand) {
   return dealerHand[randomIndex];
 }
 
-function reportHands(playerHand, knownDealerCard) {
-  reportDealerHand(knownDealerCard);
-  reportPlayerHand(playerHand);
-}
+// function reportHands(playerHand, dealerHand) {
+//   reportHand(playerHand);
+//   reportHand(dealerHand);
+// }
 
-function reportDealerHand(knownDealerCard) {
+function reportKnownDealerHand(knownDealerCard) {
   const [cardValue, cardName] = knownDealerCard;
-  console.log(`The dealer has a ${cardValue} of ${cardName}.`);
+  informUser(`The dealer has a ${cardValue} of ${cardName}.\n`);
 }
 
-function reportPlayerHand(playerHand) {
+function reportHand(hand, user) {
   let handStr = '';
 
-  for (let card = 0; card < playerHand.length; card++) {
-    const currCard = playerHand[card];
-    const [cardValue, cardName] = currCard;
+  hand.forEach(card => {
+    const [cardValue, cardName] = card;
+    handStr += `\n${drawPrompt()}   ${cardValue} of ${cardName}.`;
+  });
 
-    handStr += `\n  - ${cardValue} of ${cardName}.`;
-  }
+  const sum = sumHand(hand);
 
-  const sum = sumHand(playerHand);
-
-  console.log(`Your hand is: ${handStr}\n    For a current sum of: ${sum}`);
+  informUser(`${user}'s hand is: ${handStr}\n` +
+             `${drawPrompt()} For a current sum of: ${sum}\n`);
 }
 
-// Try again using ACE = 11 and arr.filter 
-// instead of a manual filter for aces. 
 function sumHand(hand) {
   const cardValues = buildCardValueArray(hand);
-  const aces = [];
-  let sum = 0;
-
-  for (let i = 0; i < cardValues.length; i++) {
-    if (cardValues[i] === 1) {
-      aces.push(1);
-      continue;
-    }
-
-    sum += cardValues[i];
-  }
-
-  sum += handleAces(sum, aces);
+  let sum = cardValues.reduce((sum, next) => sum + next, 0);
+  sum += handleAces(cardValues, sum);
 
   return sum;
 }
 
 function buildCardValueArray(hand) {
-  const cardValues = [];
-
-  for (let card = 0; card < hand.length; card++) {
-    let cardValue = hand[card][0];
-
-    if (typeof cardValue === 'string') {
-      cardValue = retrieveSpecialCardValue(cardValue);
-    }
-
-    cardValues.push(cardValue);
-  }
-
-  return cardValues;
+  return hand.map(card => {
+    const val = card[0];
+    if (typeof val === 'string') return retrieveCardValue(val);
+    return val;
+  })
 }
 
-function retrieveSpecialCardValue(card) {
+function retrieveCardValue(card) {
   switch (card) {
     case 'JACK':  return JACK;
     case 'QUEEN': return QUEEN;
     case 'KING':  return KING;
     case 'ACE':   return ACE;
-    default:      return 0; // check spelling in your SUIT array. 
-                            // Consider changing the return type to highlight that there was a problem.
+    default:      return `Invalid card`; // check spelling in your SUIT array. 
   }
 }
 
-function handleAces(sum, aces) {
+function handleAces(hand, sum) {
+  const retractValue = 10;
   let result = 0;
-
-  aces.forEach(() => {
-    let val = oneOrEleven(sum);
-    result += val;
-    sum += val;
+  hand.filter(val => val === ACE).forEach(_ => {
+    if (sum > MAX_SUM) {
+      sum -= retractValue;
+      result -= retractValue;
+    }
   });
 
+  // Should be 0 or negative.
   return result;
 }
 
-function oneOrEleven(sum) {
-  const maxSum = 10;
-
-  if (sum <= maxSum)  return 11;
-  return 1;
-}
-
-
 function runPlayerTurn(hand, deck) { 
-  let keepGoing = true;
-  let result = NO_RESULT;
-
-  result = checkForWinOrBust(hand);
-  if (result !== '')  return result;
+  informUser(`${PLAYER}'s turn.`);
 
   do {
-    let hitAgain = prompt("Hit or stay").toLowerCase();
+    const hitAgain = askHitOrStay();
+    if (!hitAgain) break;
+
+    informUser(`${PLAYER} hits.\n`);
+    drawCard(hand, deck);
+    reportHand(hand, PLAYER);
+
+    if (winOrBust(hand)) break;
+
+  } while (true)
+
+  informUser(`${PLAYER} has decided to stay.\n`);
+}
+
+function askHitOrStay() {
+    let hitAgain = getUserInput("Hit or stay").toLowerCase();
     const acceptableAnswers = ['hit', 'h', 'stay', 's'];
 
     while (!validateAnswer(hitAgain, acceptableAnswers)) {
-      hitAgain = prompt("Sorry, we need a 'hit' or 'stay' answer").toLowerCase();
+      hitAgain = getUserInput("Sorry, we need a 'hit' or 'stay' answer").toLowerCase();
     }
 
-    if (hitAgain[0] === 'h') {
-      hand.push(removeRandomCard(deck));
-      reportPlayerHand(hand);
-
-      result = checkForWinOrBust(hand);
-      if (result !== '')  return result;
-    } else {
-      keepGoing = false;
-    }
-  } while (keepGoing);
+    return hitAgain[0] === 'h';
 }
+
+
 
 function runDealerTurn(hand, deck) {
+  informUser(`${DEALER}'s turn.`);
+
   let sum = sumHand(hand);
-  const DEALER_MAX = 17;
 
   while (sum <= DEALER_MAX) {
-    hand.push(removeRandomCard(deck));
+    informUser(`${DEALER} hits.\n`);
+    drawCard(hand, deck);
+    reportHand(hand, DEALER);
     sum = sumHand(hand);
   }
-
-  return checkForWinOrBust(hand);
 }
 
-function checkForWinOrBust(hand) {
+function winOrBust(hand) {
   const sum = sumHand(hand);
 
-  if (sum === 21) return WIN;
-  if (sum > 21)   return BUST;
-  return NO_RESULT;
+  if (checkWin(sum))  return true;
+  if (checkBust(sum)) return true;
+  return false;
 }
 
-function generateWinner(result, player, playerHand, dealerHand) {
-  switch (result) {
-    case WIN:   return `${player} won!`;
-    case BUST:  return `${player} bust!`;
-    default:    return decideWinner(playerHand, dealerHand);
+function roundResult(playerHand, dealerHand) {
+  const playerTotal = sumHand(playerHand);
+  const dealerTotal = sumHand(dealerHand);
+
+  if (checkBust(playerTotal))     return [BUST, PLAYER];
+  if (checkBust(dealerTotal))     return [BUST, DEALER];
+  if (playerTotal < dealerTotal)  return [WIN, DEALER];
+  if (playerTotal > dealerTotal)  return [WIN, PLAYER];
+  return [TIE];
+}
+
+function checkWin(sum) {
+  return sum === MAX_SUM;
+}
+
+function checkBust(sum) {
+  return sum > MAX_SUM;
+}
+
+function printWinningMessage(resultArr) {
+  const message = formulateWinningMessage(resultArr);
+  informUser(message);
+}
+
+function formulateWinningMessage(resultArr) {
+  const [outcome, player] = resultArr;
+
+  let result = '';
+  if (resultArr.length > 1) {
+    result = `${outcome}${player}`;
+  } else {
+    result = outcome;
   }
-}
 
-function decideWinner(playerHand, dealerHand) {
-  const playerSum = sumHand(playerHand);
-  const dealerSum = sumHand(dealerHand);
-
-  if (playerSum > dealerSum) return `${PLAYER} won!`;
-  return `${DEALER} won!`;
+  switch (result) {
+    case TIE:           return `It's a tie!`;
+    case BUST + PLAYER: return `You busted! Dealer wins!`;
+    case BUST + DEALER: return `Dealer busted! You win!`;
+    case WIN  + PLAYER: return `You win!`;
+    case WIN  + DEALER: return `Dealer wins!`;
+    default:            return `invalid result`;
+  }
 }
 
 function shouldGoAgain(message) {
-  let answer = prompt(`${message}`).toLowerCase();
+  let answer = getUserInput(`${message}`).toLowerCase();
   const acceptableAnswers = ['yes', 'y', 'yea', 'yep', 'yeah', 'no', 'n', 'nah', 'nope'];
 
   while (!validateAnswer(answer, acceptableAnswers)) {
-    answer = prompt(`Type 'y' or 'n'`).toLowerCase();
+    answer = getUserInput(`Type 'y' or 'n'`).toLowerCase();
   }
 
   return answer[0] !== 'n';
 }
 
+function drawCard(hand, deck) {
+  hand.push(removeRandomCard(deck));
+}
 
 function validateAnswer(answer, acceptedAnswers) {
   return acceptedAnswers.includes(answer);
 }
 
-function prompt(message) {
+function getUserInput(message) {
   return readLine.question(`${drawPrompt()} ${message}: `);
+}
+
+function informUser(message) {
+  console.log(`${drawPrompt()} ${message}`);
 }
 
 function drawPrompt() {
   return '=>';
 }
-
-
-
-
-// Unnecessarily general. Keeping until first commit.
-// Deck structures aren't gonna change any time soon.
-// function initDeckSoft() {
-//   const SUIT_TYPES.length = 4;
-//   const CARDS_IN_SUIT = 13;
-//   const SPECIAL_VALUES = [JACK, QUEEN, KING, ACE];
-//   const FACE_CARD_COUNT = CARDS_IN_SUIT - SPECIAL_VALUES.length;
-
-//   const newDeck = new Array(SUIT_TYPES.length);
-
-//   for (let suit = 0; suit < SUIT_TYPES.length; suit++) {
-//     newDeck[suit] = new Array(CARDS_IN_SUIT);
-
-//     for (let card = 0; card < FACE_CARD_COUNT; card++) {
-//       newDeck[suit][card] = card + 2;
-//     }
-
-//     for (let specialCard = FACE_CARD_COUNT;
-//         specialCard < CARDS_IN_SUIT;
-//         specialCard++) {
-//           newDeck[suit][specialCard] = SPECIAL_VALUES[specialCard - FACE_CARD_COUNT];
-//         }
-//   }
-
-//   return newDeck;
-// }
