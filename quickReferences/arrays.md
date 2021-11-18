@@ -53,7 +53,12 @@
 
 ### `arr.splice(start [, deleteCount [, ...itemN]])`
 - Mutates `arr`.
-- 
+- `start` is the index at which to start changing the array.
+- `deleteCount` optionally says how many elements to remove.
+- If `deleteCount` is missing, will remove from `start` to end.
+- `itemN` optionally adds `items` to array from `start`.
+- Returns array containing deleted elements.
+- (Needs completion).
 
 ### `arr.map(callback(element [, index [, array]]), [, thisArg])`
 - Non-mutating in itself, but `callback` can mutate. 
