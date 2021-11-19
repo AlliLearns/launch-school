@@ -1,8 +1,7 @@
-// Build a Rock Paper Scissors game.
-// Our version of the game lets the user play
-// against the computer.
+const readLine = require('readline-sync');
 
-const readLine = require('../../node_modules/readline-sync');
+const WINS_NEEDED = 3;
+const BEST_OF = 5;
 
 const ROCK = 'rock';
 const PAPER = 'paper';
@@ -31,68 +30,90 @@ const CODE_MAP = {
 };
 
 
-welcomeUser();
-
-do {
-  const plays = [];
-  let playerWins = 0;
-  let computerWins = 0;
-
-  while (playerWins < 3 && computerWins < 3) {
-    console.log(`${drawPrompt()} Round ${plays.length + 1}.`);
-
-    const playerChoice = getPlayerChoice(`Choose one: ${PRINT_CHOICES.join(', ')}.`);
-    const computerChoice = getComputerChoice();
-
-    reportChoices(playerChoice, computerChoice);
-
-    const winner = determineWinner(playerChoice, computerChoice);
-    console.log(formatWinner(winner));
-
-    plays.push(winner);
-
-    if (winner === VALID_OUTCOMES[1]) {
-      console.log('incrementing player win count');
-      playerWins += 1;
-    } else if (winner === VALID_OUTCOMES[2]) {
-      console.log('incrementing computer win count');
-      computerWins += 1;
-    }
-
-    console.log(playerWins);
-    console.log(computerWins);
-  }
-
-  reportChampion(playerWins);
-} while (askUser(`Play again? (y / n)`));
-
+greetUser();
+runGame();
 farewellUser();
 
 
-function welcomeUser() {
-  console.log(`Welcome to Rock Paper Scissors Spock Lizard!\n`);
+function greetUser() {
+  printHeader(`Welcome to Rock Paper Scissors Spock Lizard!`);
+  waitForUser(`Press 'enter' to play!`);
 }
 
 function farewellUser() {
-  console.log(`Bye! Play again sometime!\n`);
+  printHeader(`Bye! Play again sometime!`);
+}
+
+function printHeader(message) {
+  const border = `=`.repeat(message.length);
+
+  console.clear();
+  console.log(border);
+  console.log(message);
+  console.log(border);
+  console.log(``);
+}
+
+function waitForUser(message) {
+  console.log(`\n`);
+  readLine.question(message);
+  console.clear();
+}
+
+function runGame() {
+  do {
+    console.clear();
+    const roundOutcomes = [];
+
+    while (!gameWon(roundOutcomes)) {
+      informUser(`Round ${roundOutcomes.length + 1}.`);
+  
+      const [playerEntry, computerEntry] = getRoundEntries()
+
+      console.clear();
+
+      reportChoices(playerEntry, computerEntry);
+      playRound(roundOutcomes, playerEntry, computerEntry);
+      reportGameStatus(roundOutcomes);
+    }
+  
+    const winner = generateWinningMessage(roundOutcomes);   
+    informUser(winner);
+
+  } while (shouldGoAgain(`Play again? (y / n)`));
+}
+
+function getRoundEntries() {
+  const playerEntry = getPlayerChoice(`Choose one: ${PRINT_CHOICES.join(', ')}`);
+  const computerEntry = getComputerChoice();
+
+  return [playerEntry, computerEntry];
+}
+
+function playRound(roundOutcomes, playerEntry, computerEntry) {
+  const outcome = getRoundOutcome(playerEntry, computerEntry);
+  informUser(formatRoundWinner(outcome));
+  console.log(`\n`);
+
+  roundOutcomes.push(outcome);
 }
 
 function getPlayerChoice(message) {
-  let choice = readLine.question(`${drawPrompt()} ${message}\n`);
+  let choice = getUserInput(`${message}`);
 
-  while (!validChoice(choice)) {
-    choice = readLine.question(`${drawPrompt()} Sorry, we need one of '${PRINT_CHOICES.join(', ')}.'\n`);
+  while (!validEntry(choice)) {
+    choice = getUserInput(`Sorry, we need one of '${PRINT_CHOICES.join(', ')}'`);
   }
 
-  return formatChoice(choice);
+  return formatEntry(choice);
 }
 
-function validChoice(choice) {
+function validEntry(choice) {
   choice = choice.toLowerCase();
   return VALID_CHOICES.includes(choice);
 }
 
-function formatChoice(choice) {
+function formatEntry(choice) {
   for (let property in CODE_MAP) {
     if (CODE_MAP[property].includes(choice)) {
       return property;
@@ -108,31 +129,32 @@ function getComputerChoice() {
 }
 
 function reportChoices(player, computer) {
-  console.log(`${drawPrompt()} You chose ${player} and the computer chose ${computer}.\n`);
+  console.log(``);
+  informUser(`You chose ${player} and the computer chose ${computer}.`);
 }
 
-function determineWinner(playerChoice, computerChoice) {
-  const tie = playerChoice === computerChoice;
+function getRoundOutcome(playerEntry, computerEntry) {
+  const tie = playerEntry === computerEntry;
 
   if (tie) {
     return VALID_OUTCOMES[0];
-  } else if (playerWins(playerChoice, computerChoice)) {
+  } else if (decideRoundWinner(playerEntry, computerEntry)) {
     return VALID_OUTCOMES[1];
-  } else if (playerWins(computerChoice, playerChoice)) {
+  } else if (decideRoundWinner(computerEntry, playerEntry)) {
     return VALID_OUTCOMES[2];
   } else {
     return `Invalid game combination.`
             + `\n Check your input validation:`
-            + `\n playerChoice: ${playerChoice}`
-            + `\n computerChoice: ${computerChoice}`;
+            + `\n playerChoice: ${playerEntry}`
+            + `\n computerChoice: ${computerEntry}`;
   }
 }
 
-function playerWins(choice1, choice2) {
+function decideRoundWinner(choice1, choice2) {
   return WINNING_COMBOS[choice1].includes(choice2);
 }
 
-function formatWinner(winner) {
+function formatRoundWinner(winner) {
   switch (winner) {
     case VALID_OUTCOMES[0]: return `It's a tie!`;
     case VALID_OUTCOMES[1]: return `Congratulations, you win!`;
@@ -141,33 +163,68 @@ function formatWinner(winner) {
   }
 }
 
+function reportGameStatus(roundOutcomes) {
+  const [playerWinCount, computerWinCount] = countWins(roundOutcomes);
 
-function askUser(message) {
-  let answer = readLine.question(`${drawPrompt()} ${message}\n`).toLowerCase();
-
-  while (!validResponse(answer)) {
-    answer = readLine.question(`${drawPrompt()} ${message}\n`).toLowerCase();
-  }
-
-  return answer[0] !== 'n';
+  informUser(`You have best ${playerWinCount} out of ${BEST_OF}.`);
+  informUser(`Computer has best ${computerWinCount} out of ${BEST_OF}.`);
+  console.log(`\n`);
 }
 
-function validResponse(answer) {
+function gameWon(roundOutcomes) {
+  const [playerWinCount, computerWinCount] = countWins(roundOutcomes);
+
+  return playerWinCount >= WINS_NEEDED || computerWinCount >= WINS_NEEDED;
+}
+
+function countWins(roundOutcomes) {
+  let playerWinCount = 0;
+  let computerWinCount = 0;
+
+  roundOutcomes.forEach(outcome => {
+    if (outcome === VALID_OUTCOMES[1]) playerWinCount += 1;
+    if (outcome === VALID_OUTCOMES[2]) computerWinCount += 1;
+  })
+
+  return [playerWinCount, computerWinCount];
+}
+
+function generateWinningMessage(roundOutcomes) {
+  const [playerWinCount, computerWinCount] = countWins(roundOutcomes);
+  const playerWon = playerWinCount > computerWinCount;
+
+  switch (playerWon) {
+    case true:  return `Yay! You won the game!`;
+    case false: return `Computer won best ${WINS_NEEDED} out of ${BEST_OF} rounds.`;
+    default:    return `Invalid winner, something went wrong.`;
+  }
+}
+
+
+function shouldGoAgain(message) {
   const validAnswers = ['yes', 'y', 'yea', 'yeah', 'yep', 'no', 'n', 'nah', 'nope'];
-  return validAnswers.includes(answer);
-}
+  let answer = getUserInput(message).toLowerCase();
 
-
-function reportChampion(playerWinsCount) {
-  if (playerWinsCount >= 3) {
-    console.log("Yay! You won the whole game!");
-  } else {
-    console.log("Computer won best 3 out of 5 games.");
+  while (!validateAnswer(answer, validAnswers)) {
+    answer = getUserInput(`Type 'y' or 'n'`).toLowerCase();
   }
 
+  return answer[0] === 'y';
+}
+
+function validateAnswer(answer, acceptedAnswers) {
+  return acceptedAnswers.includes(answer);
+}
+
+function getUserInput(message) {
+  return readLine.question(`${drawPrompt()} ${message}: `);
+}
+
+function informUser(message) {
+  console.log(`${drawPrompt()} ${message}`);
 }
 
 function drawPrompt() {
-  return '=>';
+  return '>>>>';
 }
 
