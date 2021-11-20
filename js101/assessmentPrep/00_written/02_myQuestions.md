@@ -59,8 +59,6 @@ In line 4 we are reassigning the variable `x` to `y`.
 </p>
 </details>
 
-
-
 <hr>
 <br>
 <hr>
@@ -72,6 +70,13 @@ const arr2 = [3, 5];
 console.log(arr1 === arr2);
 console.log(arr1 == arr2);
 ```
+
+<details><summary>ANSWER</summary>
+<p> 
+
+When `arr1` and `arr2` are created, they may be given the same content, but they are not the same array. `arr1` contains a pointer that will be different from the pointer contained in `arr2`. When the two arrays are compared with strict equality on line 3, the result will be `false`, because JavaScript is comparing the values of two different memory addresses. When the two arrays are comapred with loose equality on line 4, the result is also `false`, because when loose equality is used to compare two objects in JavaScript, it behaves exactly like strict equality. In both cases, lines 3 and 4 would only print `true` if `arr1` and `arr2` were the same object. 
+</p>
+</details>
 
 <hr>
 <br>
@@ -89,3 +94,45 @@ console.log(z);
 <hr>
 <br>
 <hr>
+
+``` js
+// What will the following code output and why?
+const dog = {
+  name: "Jack",
+  age: 6,
+  breed: "terrior",
+}
+
+let cat = {
+  name: "Atticus",
+  age: 11,
+  breed: "short-hair",
+}
+
+
+console.log(dog.name = cat.name);
+console.log(cat.age = dog[age]);
+```
+
+<hr>
+<br>
+<hr>
+
+``` js
+// What will the last two lines of code do and why?
+const dog = {
+  name: "Jack",
+  age: 6,
+  breed: "terrior",
+}
+
+let cat = {
+  name: "Atticus",
+  age: 11,
+  breed: "short-hair",
+}
+
+cat = dog;
+dog = cat;
+```
+
