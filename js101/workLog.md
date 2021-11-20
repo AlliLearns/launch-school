@@ -2,6 +2,14 @@
 
 <hr>
 
+## Course and Assessment Totals
+| Course | Start | End | Active | Hours |
+| - | - | - | - | - | 
+| JS101 | 27.10.2021 | 18.11.2021 | 20 days | 85 | 
+| JS109 | 18.11.2021 | - | - | - | 
+
+<br>
+
 ## JS101 Totals
 | Lesson | Start | End | Active | Hours |
 | - | - | - | - | - | 
@@ -11,7 +19,7 @@
 | 04 | 11.11.2021 | 12.11.2021 | 02 days | 6.5 |
 | 05 | 12.11.2021 | 15.11.2021 | 04 days | 15.75 |
 | 06 | 15.11.2021 | 18.11.2021 | 04 days | 23.5 |
-| SS | - | - | 04 | 8.75 |
+| SS | - | - | 04 days | 8.75 |
 <!-- |  |  |  |  |  | -->
 
 <br>
@@ -19,6 +27,10 @@
 ## JS109 Totals - Review of JS101
 | Lesson | Date  | Hours |
 | - | - | - |
+
+
+
+
 
 <!-- <br>
 
@@ -108,6 +120,7 @@
 | 15.11.2021 M | JS101-05 <br> JS101-05 <br> JS101-06 <br> JS101-06 <br> JS101-06 | 0600 - 0745 <br> 0830 - 0900 <br> 1030 - 1300 <br> 1430 - 1600 <br> 1730 - 2100 | Completed `problems 15 - 17` of assignment 5. <br> Completed `Quiz 4`. <br> Completed `assignments 1 - 4`. <br> Worked on user input portion of `generalTick.js`. <br> Completed `assignments 5 - 6`. |
 | 16.11.2021 T | JS101-06 <br> JS101-02 <br> JS101-02 <br> JS101-02 <br> JS101-06 <br> JS101-06 | 0630 - 0930 <br> 1000 - 1045 <br> 1200 - 1230 <br> 1230 - 1445 <br> 1500 - 1715 <br> 1845 - 1945 | Completed `generalTick.js` with `assignment 7`. <br> Made a todo list to prepare `mortgage.js` for review. <br> Completed todos for `mortgage.js`. <br> Refactored `mortgage.js` for review. <br> Completed `ticktacktoe.js` from `assignments 3 - 7`. <br> Refactored names and structure in `generalTick.js`. |
 | 17.11.2021 W | JS101-06 | 0630 - 1015 <br> 1330 - 1430 <br> 1430 - 1730 | Completed first pass of `twentyOne.js`. <br> Went over their solution in `assignment 10`. <br> Refactored `twentyOne.js` with `lsTwentyOne.js`. |
-| 18.11.2021 R | JS101-06 <br> JS101-06 <br> JS109-01 <br> JS109-01 <br> JS101-02 <br> JS101-02 <br> JS109-01 | 0600 - 0615 <br> 0615 - 0700 <br> 0900 - 0930 <br> 1030 - 1130 <br> 1315 - 1330 <br> 1330 - 1530 <br> 1545 - 1700 | Completed `Quiz 5` <br> Submitted course feedback. <br> Read through `assignments 1 - 3`. <br> Attended my first study group with Antonia. <br> Made changes to `mortgage.js` from feedback. <br> Refactored `rps.js` for code review. <br> Took notes on the test study guide. |
-| 19.11.2021 F | JS109-01 | 0600 - 0000 | - |
+| 18.11.2021 R | JS101-06 <br> JS101-06 <br> JS109-01 <br> JS109-01 <br> JS101-02 <br> JS101-02 <br> JS109-01 | 0600 - 0615 <br> 0615 - 0700 <br> 0900 - 0930 <br> 1030 - 1130 <br> 1315 - 1330 <br> 1330 - 1530 <br> 1545 - 1700 | Completed `Quiz 5` <br> Submitted course feedback. <br> Read through `assignments 1 - 3`. <br> Attended my first study group with Antonia. <br> Made changes to `mortgage.js` from feedback. <br> Refactored `rps.js` for code review. <br> Took notes on `Answering Assessment Questions`. |
+| 19.11.2021 F | JS109-01 | 0645 - 0800 <br> 1130 - 1145 <br> 1400 - 1430 | Listed question types that might be on the assessment. <br> Came up with some questions to challenge my study buddy. <br> Documented the list of `Topics of Interest`. |
+| 20.11.2021 S | JS109-01 | 1230 - 1330 | Structured my assessment preparation area. |
 <!-- |  |  |  |  | -->

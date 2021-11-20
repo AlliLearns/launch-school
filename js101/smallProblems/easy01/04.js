@@ -4,12 +4,19 @@
 
 // 1 sqm == 10.7639 sqft
 
-const rlSync = require('../../node_modules/readline-sync');
+const SQFT = 10.7639;
 
-const length = rlSync.question('Enter the length of the room in meters:\n');
-const width = rlSync.question('Enter the width of the room in meters:\n');
+const readLine = require(`readline-sync`);
+
+const length = readLine.question("What's the length of the room in meters? ");
+const width = readLine.question("What's the width of the room in meters? ");
 
 const area = length * width;
-const areaFeet = area * 10.7639;
+const impArea = area * SQFT;
 
-console.log(`The area of the room is ${area.toFixed(2)} square meters (${areaFeet.toFixed(2)} square feet).`);
+console.log(`The area of the room is ${area.toFixed(2)} square meters (${impArea.toFixed(2)} square feet).`);
+
+/*
+  
+
+*/
