@@ -123,4 +123,5 @@
 | 18.11.2021 R | JS101-06 <br> JS101-06 <br> JS109-01 <br> JS109-01 <br> JS101-02 <br> JS101-02 <br> JS109-01 | 0600 - 0615 <br> 0615 - 0700 <br> 0900 - 0930 <br> 1030 - 1130 <br> 1315 - 1330 <br> 1330 - 1530 <br> 1545 - 1700 | Completed `Quiz 5` <br> Submitted course feedback. <br> Read through `assignments 1 - 3`. <br> Attended my first study group with Antonia. <br> Made changes to `mortgage.js` from feedback. <br> Refactored `rps.js` for code review. <br> Took notes on `Answering Assessment Questions`. |
 | 19.11.2021 F | JS109-01 | 0645 - 0800 <br> 1130 - 1145 <br> 1400 - 1430 | Listed question types that might be on the assessment. <br> Came up with some questions to challenge my study buddy. <br> Documented the list of `Topics of Interest`. |
 | 20.11.2021 S | JS109-01 | 1230 - 1330 <br> 1400 - 1430 <br> 1500 - 1530 | Structured my assessment preparation area. <br> Came up with new questions for study buddy. <br> Read through each Discussion topic in JS109. |
+| 21.11.202  U | JS109-01 | 0745 - 0815 | Did the assignment a study buddy sent me. |
 <!-- |  |  |  |  | -->
