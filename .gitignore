@@ -1,3 +1,4 @@
+# VSCode settings
 .vscode/*
 
 # Node
@@ -6,3 +7,6 @@ package-lock.json
 
 # Notes from their paid content
 /ignore
+
+# Assessment prep I wasn't sure we were allowed to share
+js101/assessmentPrep/00_written/studyBuddies/answers
