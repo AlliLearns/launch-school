@@ -136,3 +136,53 @@ cat = dog;
 dog = cat;
 ```
 
+<hr>
+<br>
+<hr>
+
+``` js
+// Explain what each of these variables contain in terms of memory references.
+let str = "Wooo! I'm a string!";
+let arr = [str, str];
+```
+[This discussion](https://launchschool.com/posts/e34dc172) is a good follow-up read. 
+
+<hr>
+<br>
+<hr>
+
+``` js
+// Is this valid code? Why or why not?
+console.log(let num = 5);
+```
+[Hint](https://launchschool.com/books/javascript/read/basics#statements) - Let it load all the way and it'll take you to the right section. 
+
+<hr>
+<br>
+<hr>
+
+``` js
+// What will this code output?
+// What's going on inside this array and why is it allowed?
+
+const arr = [1, 2, 3];
+arr.length = 5;
+arr.name = 'Number array';
+console.log(arr);
+```
+
+<hr>
+<br>
+<hr>
+
+``` js
+// Write a function that will extract all numbers 
+// from a given array that are divisible by 3
+// and put those elements in a new array.
+
+const arr1 = [0, 1, 2, 3];
+const arr2 = [3, '3'];
+
+console.log(extractMultiplesOfThree(arr1)); // []
+console.log(extractMultiplesOfThree(arr2)); // []
+```
