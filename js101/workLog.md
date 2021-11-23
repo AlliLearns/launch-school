@@ -125,3 +125,16 @@
 | 20.11.2021 S | JS109-01 | 1230 - 1330 <br> 1400 - 1430 <br> 1500 - 1530 <br> 1600 - 1630 | Structured my assessment preparation area. <br> Came up with new questions for study buddy. <br> Read through each Discussion topic in JS109. <br> Had a meeting with study buddy. |
 | 21.11.202  U | JS109-01 | 0745 - 0815 <br> 1000 - 1200 <br> 1230 - 1245 <br> 1300 - 1430 | Did the assignment a study buddy sent me. <br> Took notes from the Intro to JavaScript book. <br> Came up with new questions for study buddy. <br> Had a meeting with study buddy. |
 <!-- |  |  |  |  | -->
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 04
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 22.11.2021 M | JS109-01 | 0530 - 0745 | Took notes on the Intro to JavaScript Book. |
+| 23.11.2021 T | JS109-01 | 0700 - 0800 <br> 1000 - 1200 | Created feedback for study buddy's first answers. <br> Refactored `calculator.js` and added some unit tests. |
+<!-- |  |  |  |  | -->
+
