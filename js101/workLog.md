@@ -135,6 +135,6 @@
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 22.11.2021 M | JS109-01 | 0530 - 0745 | Took notes on the Intro to JavaScript Book. |
-| 23.11.2021 T | JS109-01 | 0700 - 0800 <br> 1000 - 1200 | Created feedback for study buddy's first answers. <br> Refactored `calculator.js` and added some unit tests. |
+| 23.11.2021 T | JS109-01 | 0700 - 0800 <br> 1000 - 1200 <br> 1245 - 1300 | Created feedback for study buddy's first answers. <br> Refactored `calculator.js` and added some unit tests. <br> Did `tipCalculator` from JS101 exercises. |
 <!-- |  |  |  |  | -->
 
