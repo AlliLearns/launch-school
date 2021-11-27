@@ -136,6 +136,8 @@
 | - | - | - | - | 
 | 22.11.2021 M | JS109-01 | 0530 - 0745 | Took notes on the Intro to JavaScript Book. |
 | 23.11.2021 T | JS109-01 | 0700 - 0800 <br> 1000 - 1200 <br> 1245 - 1300 <br> 1300 - 1400 | Created feedback for study buddy's first answers. <br> Refactored `calculator.js` and added some unit tests. <br> Did `tipCalculator` from JS101 exercises. <br> Met with study buddy. |
-| 24.11.2021 W | JS109-01 | 0700 - 0000 | - |
+| 24.11.2021 W | JS109-01 | 0700 - 1000 <br> 1100 - 1200 | Took notes on the Intro to JavaScript Book. <br> Attended another study group with Antonia.  |
+| 25.11.2021 R | JS109-01 | 0530 - 0600 <br> 0600 - 0630 <br> 0630 - 0700 <br> 0830 - 0930 | Took notes from Lesson 02. <br> Answered study buddy questions. <br> Made plan towards prepping for and taking the test. <br> Made explanations for half the Topics of Interest. |
+| 26.11.2021 F | JS109-01 | 0730 - 0800 <br> 0800 - 0900 <br> 0900 - 1000 <br> 1000 - 1015 <br> 1330 - 1400 <br> 1400 - 1500 <br> 1500 - 1515 <br> 1515 - 1600 <br> 1600 - 1645 <br> 1945 - 2030 | Finished explanations for remainder of Topics of Interest. <br> Thought about how to answer questions from the study guide. <br> Read blog posts about preparing for tests. <br> Made notes from study session on 24th. <br> Finished notes on the Intro to JavaScript Book. <br> Made a reference table for explicit number coercion. <br> Made a reference table for explicit string coercion. <br> Took notes from JS101-02 assignments. <br> Reviewed quizzes. <br> Took notes on side-effects. |
 <!-- |  |  |  |  | -->
 
