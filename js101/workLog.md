@@ -54,6 +54,7 @@
 | 05 | 04 | 15.75 |
 | 06 | 04 | 23.5 |
 | SS | -- | 8.75 |
+| AS | -- | 48.25 |
 | F | 20 | 85 | -->
 <!-- |  |  |  | -->
 
@@ -139,5 +140,22 @@
 | 24.11.2021 W | JS109-01 | 0700 - 1000 <br> 1100 - 1200 | Took notes on the Intro to JavaScript Book. <br> Attended another study group with Antonia.  |
 | 25.11.2021 R | JS109-01 | 0530 - 0600 <br> 0600 - 0630 <br> 0630 - 0700 <br> 0830 - 0930 | Took notes from Lesson 02. <br> Answered study buddy questions. <br> Made plan towards prepping for and taking the test. <br> Made explanations for half the Topics of Interest. |
 | 26.11.2021 F | JS109-01 | 0730 - 0800 <br> 0800 - 0900 <br> 0900 - 1000 <br> 1000 - 1015 <br> 1330 - 1400 <br> 1400 - 1500 <br> 1500 - 1515 <br> 1515 - 1600 <br> 1600 - 1645 <br> 1945 - 2030 | Finished explanations for remainder of Topics of Interest. <br> Thought about how to answer questions from the study guide. <br> Read blog posts about preparing for tests. <br> Made notes from study session on 24th. <br> Finished notes on the Intro to JavaScript Book. <br> Made a reference table for explicit number coercion. <br> Made a reference table for explicit string coercion. <br> Took notes from JS101-02 assignments. <br> Reviewed quizzes. <br> Took notes on side-effects. |
+| 27.11.2021 S | JS109-01 | 0700 - 0730 <br> 0730 - 0800 <br> 0845 - 0945 <br> 0945 - 1015 <br> 1015 - 1115 <br> 1300 - 1430 <br> 1430 - 1500 <br> 1800 - 1830 <br> 1830 - 2115 | Took notes on implicit type coercion. <br> Studied over collections. <br> Took notes on string and array methods. <br> Set up two mock tests of 5 questions. <br> Started consolidating questions I've come up with. <br> Had a call with study buddy. <br> Made mock questions to study with. <br> Answered study buddy's 5-set of questions. <br> Read blog posts about prepping for the assessment. |
+| 28.11.2021 U | JS109-01 | 0700 - 0830 <br> 0830 - 0945 <br> 1300 - 1430 | Revised answers to mock assessment questions. <br> Made a program that will generate random question numbers. <br> Had a call with study buddy. |
+<!-- |  |  |  |  | -->
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 04
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 29.11.2021 M | JS101-09 | 0430 - 0730 <br> 1300 - 1800 | Took notes on string methods and created exercises. <br> Took notes on string and array methods. |
+| 30.11.2021 T | JS109-01 | 0500 - 0600 <br> 0615 - 0630 <br> 0930 - 1030 <br> 1300 - 1345 | Finished notes on array methods. <br> Took notes on object methods. <br> Attended another study group with Antonia. <br> Had a meeting with study buddy. |
+| 01.12.2021 W | JS109-01 | 0700 - 0830 | Took study buddy's mock assessment test. |
+| 02.12.2021 R | JS109-01 | 0500 - 0700 <br> 0800 - 1100 | Prepared to take assessment. <br> Took written assessment. |
+<!-- | 03.12.2021 F | JS109-01 | 0600 - 0000 |  | -->
 <!-- |  |  |  |  | -->
 
