@@ -5,44 +5,40 @@
 // bill to the console. You can ignore input validation
 // and assume that the user will enter numbers. 
 
+/*
+  INPUT   user input for bill amount and tip rate. 
+  OUTPUT  print tip and total amount of the bill. 
+  RULES   can ignore input validation.
+          can assume user will enter numbers.
+  DATA    primitive data
+  ALGORITHM
+    - declare constant `readLine` and initialize it to require('readline-sync')
+
+    - function prompt(question) 
+      - return a readLine.question(`=> ${question}`);
+    
+    - ask user for bill amount and store in `bill`
+    - ask user for tip percentage and store in `tipPercentage`
+
+    - calculate `tip` with bill * tipPercentage
+    - calculate `totalBill` with bill + tip
+
+    - print tip amount in USD format
+    - print total bill in USD format
+*/
+
+
 const readLine = require('readline-sync');
 
-function drawPrompt() {
-  return `=>`;
+function prompt(question) {
+  return readLine.question(`=> ${question}: `);
 }
 
-function promptUser(message) {
-  return readLine.question(`${drawPrompt()} ${message}? `);
-}
+const bill = Number(prompt("What is the bill"));
+const tipPercentage = Number(prompt("What is the tip percentage"));
 
-function calculateTip(bill, tipRate) {
-  return bill * (tipRate / 100);
-}
+const tip = bill * ((tipPercentage / 100)).toFixed(2);
+const totalBill = (bill + tip).toFixed(2);
 
-function calculateTotal(bill, tip) {
-  return Number(bill) + tip;
-}
-
-function printOutcome(tip, total) {
-  const formattedTip = tip.toLocaleString('en', {
-    style: 'currency',
-    currency: 'USD',
-  });
-
-  const formattedTotal = total.toLocaleString('en', {
-    style: 'currency',
-    currency: 'USD',
-  });;
-
-  console.log(`The tip is ${formattedTip}`);
-  console.log(`The total is ${formattedTotal}`);
-}
-
-const bill = promptUser(`What is the bill`);
-const rate = promptUser(`What is the tip percentage`);
-
-const tip = calculateTip(bill, rate);
-const total = calculateTotal(bill, tip);
-
-printOutcome(tip, total);
-
+console.log(`The tip is \$${tip}`);
+console.log(`The total is \$${totalBill}`);

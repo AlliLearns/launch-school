@@ -1,22 +1,21 @@
 // Log all odd numbers from `1` to `99` inclusive
 // (to the console) with each number on a separate line.
 
-for (let i = 1; i <= 99; i += 2) {
-    console.log(i);
+/*
+    INPUT   integer numbers
+    OUTPUT  printing
+    RULES   log odd numbers from 1 to 99 inclusive
+    DATA    primitive 
+    ALGORITHM
+        - declare a variable `maximum` and set it to 99.
+        - declare a variable `minimum` and set it to 99.
+        - create a for loop that starts at `minimum` and stops at `maximum`
+            - print every odd number.
+*/
+
+const MINIMUM = 1;
+const MAXIMUM = 99;
+
+for (let i = MINIMUM; i <= MAXIMUM; i++) {
+    if (i % 2 === 1) console.log(i);
 }
-
-// Further Exploration
-// Repeat this exercise with a technique different from the one 
-// that you used, and different from teh one provided. Also 
-// consider adding a way for the user to specify the limits of 
-// the odd numbers logged to the console.
-
-function logOddToLimit(limit) {
-    let i = 1;
-    while (i <= limit) {
-        console.log(i);
-        i += 2;
-    }
-}
-
-logOddToLimit(99);

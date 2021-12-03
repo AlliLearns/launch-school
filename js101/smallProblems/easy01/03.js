@@ -1,16 +1,21 @@
 // Log all even numbers from `1` to `99` inclusive
 // to the console, with each number on a separate line. 
 
-for (let i = 1; i < 100; i += 2) {
-    if (i === 99) break;
-    console.log(i + 1);
-}
+/*
+    INPUT   integer numbers
+    OUTPUT  printing
+    RULES   print even numbers from 1 to 99 inclusive
+    DATA    primitive numbers
+    ALGORITHM
+        - declare a `minimum` variable and initialize it to 1.
+        - declare a `maximum` variable and initialize it to 99.
+        - loop from `minimum` to `maximum` inclusive 
+            - print every even number.
+*/
 
-// Their solution
-// for (let number = 1; number < 100; number += 1) {
-//     if (number % 2 === 1) {
-//         continue;
-//     }
-//
-//     console.log(number);
-// }
+const MINIMUM = 1;
+const MAXIMUM = 99;
+
+for (let i = MINIMUM; i <= MAXIMUM; i++) {
+    if (i % 2 === 0) console.log(i);
+}
