@@ -156,6 +156,7 @@
 | 30.11.2021 T | JS109-01 | 0500 - 0600 <br> 0615 - 0630 <br> 0930 - 1030 <br> 1300 - 1345 | Finished notes on array methods. <br> Took notes on object methods. <br> Attended another study group with Antonia. <br> Had a meeting with study buddy. |
 | 01.12.2021 W | JS109-01 | 0700 - 0830 | Took study buddy's mock assessment test. |
 | 02.12.2021 R | JS109-01 | 0500 - 0700 <br> 0800 - 1100 | Prepared to take assessment. <br> Took written assessment. |
-| 03.12.2021 F | JS109-01 | 0600 - 0700 <br> 0730 - 0830 <br> 1300 - 1400 <br> 1500 - 1530 <br> 1530 - 1615 <br> 1645 - 1830 | Disorganized learning while waiting for assessment result. <br> Read some articles about preparing for the interview. <br> Met with study buddy. <br> Filled in reference sheets for Number and Math. <br> Re-did questions 1 - 5 of `smallProblems`. <br> Completed questions 6 - 11 of `smallProblems`. |
+| 03.12.2021 F | JS109-01 | 0600 - 0700 <br> 0730 - 0830 <br> 1300 - 1400 <br> 1500 - 1530 <br> 1530 - 1615 <br> 1645 - 1830 | Disorganized learning while waiting for assessment result. <br> Read some articles about preparing for the interview. <br> Met with study buddy. <br> Filled in reference sheets for Number and Math. <br> Re-did questions 1 - 5 of `easy01`. <br> Completed questions 6 - 11 of `easy01`. |
+| 04.12.2021 S | JS109-01 | 0530 - 0630 <br> 0630 - 0800 | Started making practice questions to use as a SPOT Lead. <br> Completed questions 1 - 6 of `easy02`. |
 <!-- |  |  |  |  | -->
 
