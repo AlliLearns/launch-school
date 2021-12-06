@@ -1,4 +1,4 @@
-# Work Log for JS101 <br> Dates are in day-mo-year format.
+# Work Log for JS101 / JS109 <br> Dates are in day-mo-year format.
 
 <hr>
 
@@ -158,6 +158,17 @@
 | 02.12.2021 R | JS109-01 | 0500 - 0700 <br> 0800 - 1100 | Prepared to take assessment. <br> Took written assessment. |
 | 03.12.2021 F | JS109-01 | 0600 - 0700 <br> 0730 - 0830 <br> 1300 - 1400 <br> 1500 - 1530 <br> 1530 - 1615 <br> 1645 - 1830 | Disorganized learning while waiting for assessment result. <br> Read some articles about preparing for the interview. <br> Met with study buddy. <br> Filled in reference sheets for Number and Math. <br> Re-did questions 1 - 5 of `easy01`. <br> Completed questions 6 - 11 of `easy01`. |
 | 04.12.2021 S | JS109-01 | 0530 - 0630 <br> 0630 - 0800 <br> 0930 - 1100 <br> 1200 - 1245 | Started making practice questions to use as a SPOT Lead. <br> Completed questions 1 - 6 of `easy02`. <br> Completed questions 1 - 10 of `easy02`. <br> Gave feedback on study buddy's first 5 questions. |
-| 05.12.2021 U | JS109-01 | 0700 - 0730 <br> 0730 - 1200 | Completed questions 11 and 12 of `easy02`. <br> Completed questions 1 - 5 of `easy03` and other studies. |
+| 05.12.2021 U | JS109-01 | 0700 - 0730 <br> 0730 - 1200 <br> 1430 - 1530 | Completed questions 11 and 12 of `easy02`. <br> Completed questions 1 - 5 of `easy03` and other studies. <br> Completed questions 6 - 8 of `easy03`. |
+<!-- |  |  |  |  | -->
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 06
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 06.12.2021 M | JS109-01 | 0500 - 0600 <br> 1530 - 0000 | Completed questions 9 and 10 of `easy03`. <br> - |
 <!-- |  |  |  |  | -->
 
