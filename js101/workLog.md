@@ -121,7 +121,7 @@
 | 15.11.2021 M | JS101-05 <br> JS101-05 <br> JS101-06 <br> JS101-06 <br> JS101-06 | 0600 - 0745 <br> 0830 - 0900 <br> 1030 - 1300 <br> 1430 - 1600 <br> 1730 - 2100 | Completed `problems 15 - 17` of assignment 5. <br> Completed `Quiz 4`. <br> Completed `assignments 1 - 4`. <br> Worked on user input portion of `generalTick.js`. <br> Completed `assignments 5 - 6`. |
 | 16.11.2021 T | JS101-06 <br> JS101-02 <br> JS101-02 <br> JS101-02 <br> JS101-06 <br> JS101-06 | 0630 - 0930 <br> 1000 - 1045 <br> 1200 - 1230 <br> 1230 - 1445 <br> 1500 - 1715 <br> 1845 - 1945 | Completed `generalTick.js` with `assignment 7`. <br> Made a todo list to prepare `mortgage.js` for review. <br> Completed todos for `mortgage.js`. <br> Refactored `mortgage.js` for review. <br> Completed `ticktacktoe.js` from `assignments 3 - 7`. <br> Refactored names and structure in `generalTick.js`. |
 | 17.11.2021 W | JS101-06 | 0630 - 1015 <br> 1330 - 1430 <br> 1430 - 1730 | Completed first pass of `twentyOne.js`. <br> Went over their solution in `assignment 10`. <br> Refactored `twentyOne.js` with `lsTwentyOne.js`. |
-| 18.11.2021 R | JS101-06 <br> JS101-06 <br> JS109-01 <br> JS109-01 <br> JS101-02 <br> JS101-02 <br> JS109-01 | 0600 - 0615 <br> 0615 - 0700 <br> 0900 - 0930 <br> 1030 - 1130 <br> 1315 - 1330 <br> 1330 - 1530 <br> 1545 - 1700 | Completed `Quiz 5` <br> Submitted course feedback. <br> Read through `assignments 1 - 3`. <br> Attended my first study group with Antonia. <br> Made changes to `mortgage.js` from feedback. <br> Refactored `rps.js` for code review. <br> Took notes on `Answering Assessment Questions`. |
+| 18.11.2021 R | JS101-06 <br> JS101-06 <br> JS109-01 <br> JS109-01 <br> JS101-02 <br> JS101-02 <br> JS109-01 | 0600 - 0615 <br> 0615 - 0700 <br> 0900 - 0930 <br> 1030 - 1130 <br> 1315 - 1330 <br> 1330 - 1530 <br> 1545 - 1700 | Completed `Quiz 5` <br> Submitted course feedback. <br> Read through `assignments 1 - 3`. <br> Attended my first study group with Antonina. <br> Made changes to `mortgage.js` from feedback. <br> Refactored `rps.js` for code review. <br> Took notes on `Answering Assessment Questions`. |
 | 19.11.2021 F | JS109-01 | 0645 - 0800 <br> 1130 - 1145 <br> 1400 - 1430 <br> 1600 - 1730 | Listed question types that might be on the assessment. <br> Came up with some questions to challenge my study buddy. <br> Documented the list of `Topics of Interest`. <br> Had a meeting with study buddy. |
 | 20.11.2021 S | JS109-01 | 1230 - 1330 <br> 1400 - 1430 <br> 1500 - 1530 <br> 1600 - 1630 | Structured my assessment preparation area. <br> Came up with new questions for study buddy. <br> Read through each Discussion topic in JS109. <br> Had a meeting with study buddy. |
 | 21.11.202  U | JS109-01 | 0745 - 0815 <br> 1000 - 1200 <br> 1230 - 1245 <br> 1300 - 1430 | Did the assignment a study buddy sent me. <br> Took notes from the Intro to JavaScript book. <br> Came up with new questions for study buddy. <br> Had a meeting with study buddy. |
@@ -137,7 +137,7 @@
 | - | - | - | - | 
 | 22.11.2021 M | JS109-01 | 0530 - 0745 | Took notes on the Intro to JavaScript Book. |
 | 23.11.2021 T | JS109-01 | 0700 - 0800 <br> 1000 - 1200 <br> 1245 - 1300 <br> 1300 - 1400 | Created feedback for study buddy's first answers. <br> Refactored `calculator.js` and added some unit tests. <br> Did `tipCalculator` from JS101 exercises. <br> Met with study buddy. |
-| 24.11.2021 W | JS109-01 | 0700 - 1000 <br> 1100 - 1200 | Took notes on the Intro to JavaScript Book. <br> Attended another study group with Antonia.  |
+| 24.11.2021 W | JS109-01 | 0700 - 1000 <br> 1100 - 1200 | Took notes on the Intro to JavaScript Book. <br> Attended another study group with Antonina.  |
 | 25.11.2021 R | JS109-01 | 0530 - 0600 <br> 0600 - 0630 <br> 0630 - 0700 <br> 0830 - 0930 | Took notes from Lesson 02. <br> Answered study buddy questions. <br> Made plan towards prepping for and taking the test. <br> Made explanations for half the Topics of Interest. |
 | 26.11.2021 F | JS109-01 | 0730 - 0800 <br> 0800 - 0900 <br> 0900 - 1000 <br> 1000 - 1015 <br> 1330 - 1400 <br> 1400 - 1500 <br> 1500 - 1515 <br> 1515 - 1600 <br> 1600 - 1645 <br> 1945 - 2030 | Finished explanations for remainder of Topics of Interest. <br> Thought about how to answer questions from the study guide. <br> Read blog posts about preparing for tests. <br> Made notes from study session on 24th. <br> Finished notes on the Intro to JavaScript Book. <br> Made a reference table for explicit number coercion. <br> Made a reference table for explicit string coercion. <br> Took notes from JS101-02 assignments. <br> Reviewed quizzes. <br> Took notes on side-effects. |
 | 27.11.2021 S | JS109-01 | 0700 - 0730 <br> 0730 - 0800 <br> 0845 - 0945 <br> 0945 - 1015 <br> 1015 - 1115 <br> 1300 - 1430 <br> 1430 - 1500 <br> 1800 - 1830 <br> 1830 - 2115 | Took notes on implicit type coercion. <br> Studied over collections. <br> Took notes on string and array methods. <br> Set up two mock tests of 5 questions. <br> Started consolidating questions I've come up with. <br> Had a call with study buddy. <br> Made mock questions to study with. <br> Answered study buddy's 5-set of questions. <br> Read blog posts about prepping for the assessment. |
@@ -153,7 +153,7 @@
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 29.11.2021 M | JS101-09 | 0430 - 0730 <br> 1300 - 1800 | Took notes on string methods and created exercises. <br> Took notes on string and array methods. |
-| 30.11.2021 T | JS109-01 | 0500 - 0600 <br> 0615 - 0630 <br> 0930 - 1030 <br> 1300 - 1345 | Finished notes on array methods. <br> Took notes on object methods. <br> Attended another study group with Antonia. <br> Had a meeting with study buddy. |
+| 30.11.2021 T | JS109-01 | 0500 - 0600 <br> 0615 - 0630 <br> 0930 - 1030 <br> 1300 - 1345 | Finished notes on array methods. <br> Took notes on object methods. <br> Attended another study group with Antonina. <br> Had a meeting with study buddy. |
 | 01.12.2021 W | JS109-01 | 0700 - 0830 | Took study buddy's mock assessment test. |
 | 02.12.2021 R | JS109-01 | 0500 - 0700 <br> 0800 - 1100 | Prepared to take assessment. <br> Took written assessment. |
 | 03.12.2021 F | JS109-01 | 0600 - 0700 <br> 0730 - 0830 <br> 1300 - 1400 <br> 1500 - 1530 <br> 1530 - 1615 <br> 1645 - 1830 | Disorganized learning while waiting for assessment result. <br> Read some articles about preparing for the interview. <br> Met with study buddy. <br> Filled in reference sheets for Number and Math. <br> Re-did questions 1 - 5 of `easy01`. <br> Completed questions 6 - 11 of `easy01`. |
@@ -169,6 +169,10 @@
 ## Week 06
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
-| 06.12.2021 M | JS109-01 | 0500 - 0600 <br> 1530 - 0000 | Completed questions 9 and 10 of `easy03`. <br> - |
+| 06.12.2021 M | JS109-01 | 0500 - 0600 | Completed questions 9 and 10 of `easy03`. |
+| 07.12.2021 T | JS109-01 | 0700 - 0900 | Worked on assessment studies. |
+| 08.12.2021 W | JS109-01 | 0700 - 0730 <br> 1130 - 1230 <br> 1730 - 1830 <br> 1930 - 2000 | Worked on assessment studies. <br> Attended another study group with Antonina. <br> Worked on assessment studies. <br> Worked on assessment studies. |
+| 09.12.2021 R | JS109-01 | 0730 - 0830 | Thought about how I could solve problems with words. |
+| 10.12.2021 F | JS109-01 | 0600 - 0800 <br> 0800 - 0900 <br> 0900 - 1100 <br> 1630 - 1730 | Worked on problems 1 - 4 of `easy04`. <br> Met with study buddy. <br> Worked on problems 5 - 8 of `easy04`. <br> Worked on problems 9 - 10 of `easy04` |
 <!-- |  |  |  |  | -->
 
