@@ -174,5 +174,6 @@
 | 08.12.2021 W | JS109-01 | 0700 - 0730 <br> 1130 - 1230 <br> 1730 - 1830 <br> 1930 - 2000 | Worked on assessment studies. <br> Attended another study group with Antonina. <br> Worked on assessment studies. <br> Worked on assessment studies. |
 | 09.12.2021 R | JS109-01 | 0730 - 0830 | Thought about how I could solve problems with words. |
 | 10.12.2021 F | JS109-01 | 0600 - 0800 <br> 0800 - 0900 <br> 0900 - 1100 <br> 1630 - 1730 | Worked on problems 1 - 4 of `easy04`. <br> Met with study buddy. <br> Worked on problems 5 - 8 of `easy04`. <br> Worked on problems 9 - 10 of `easy04` |
+| 11.12.2021 S | JS109-01 | 0730 - 0930 | Worked on problems 1 - 4 of `easy05`. |
+| 12.12.2021 U | JS109-01 | 0830 - 0930 | Worked on problems 5 - 10 of `easy05`. |
 <!-- |  |  |  |  | -->
-
