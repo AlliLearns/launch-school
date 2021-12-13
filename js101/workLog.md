@@ -175,5 +175,17 @@
 | 09.12.2021 R | JS109-01 | 0730 - 0830 | Thought about how I could solve problems with words. |
 | 10.12.2021 F | JS109-01 | 0600 - 0800 <br> 0800 - 0900 <br> 0900 - 1100 <br> 1630 - 1730 | Worked on problems 1 - 4 of `easy04`. <br> Met with study buddy. <br> Worked on problems 5 - 8 of `easy04`. <br> Worked on problems 9 - 10 of `easy04` |
 | 11.12.2021 S | JS109-01 | 0730 - 0930 | Worked on problems 1 - 4 of `easy05`. |
-| 12.12.2021 U | JS109-01 | 0830 - 0930 | Worked on problems 5 - 10 of `easy05`. |
+| 12.12.2021 U | JS109-01 | 0830 - 0930 <br> 1100 - 1200 <br> 1730 - 1830 | Worked on problems 5 - 10 of `easy05`. <br> Worked on problem 11 of `easy05`. <br> Worked on problems 11 - 12 of `easy05`. |
+<!-- |  |  |  |  | -->
+
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 07
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 13.12.2021 M | JS109-01 | 0700 - 0000 |  |
 <!-- |  |  |  |  | -->
