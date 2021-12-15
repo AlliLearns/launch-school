@@ -187,5 +187,6 @@
 ## Week 07
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
-| 13.12.2021 M | JS109-01 | 0700 - 0000 |  |
+| 13.12.2021 M | JS109-01 | 0700 - 0800 | Skimmed the Regular Expression Book. |
+| 14.12.2021 T | JS109-01 | 0700 - 1000 <br> 1200 - 1300 | Worked on problems 1 - 10 of `easy06`. <br> Worked on problems 11 - 12 of `easy06`. |
 <!-- |  |  |  |  | -->
