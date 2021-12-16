@@ -13,23 +13,22 @@
 // analyzing and manipulating the number.
 
 /*
-  INPUT   a number
-  OUTPUT  a string representation of that number
-  RULES   construct a string from a number
-          don't use shortcuts
-  DATA    arrays
+  PROBLEM
+    input is a string 
+    output is a number
+    convert the given string to a number
+    do not use built-in explicit type conversion methods 
+
   ALGORITHM
-    - function integerToString(num)
-      - declare array `digits` and init to empty array
+    if input is 0 return '0'
+    create an empty array `digits`
 
-      - iterate over `num`
-        - declare a constant `digit` and assign it to `num % 10`
-        - push `digit` onto `digits`
-        - update `num` to `(num - digit) / 10`
+    start a loop for as long as num is positive
+      grab the smallest digit place by modding by 10 and push onto `digits`
+      remove the digit times 10 from num
+    end loop
 
-      - reverse `digits`
-      - join `digits` to a string `str`
-      - return `str
+    return the reversed, joined array `digits`
 */
 
 function integerToString(num) {
@@ -38,14 +37,11 @@ function integerToString(num) {
   const digits = [];
 
   while (num > 0) {
-    const digit = num % 10;
-    digits.push(digit);
-    num = (num - digit) / 10;
+    digits.push(num % 10);
+    num = Math.trunc(num / 10);
   }
 
-  digits.reverse();
-  const str = digits.join('');
-  return str;
+  return digits.reverse().join('');
 }
 
 console.log(integerToString(4321));        // "4321"

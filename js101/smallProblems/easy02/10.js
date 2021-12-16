@@ -18,36 +18,15 @@
 // the previous lesson. 
 
 /*
-  INPUT   a string
-  OUTPUT  a number
-  RULES   convert the string to a number. 
-          Pos if first char is `+` or a digit.
-          Neg if first char is `-`.
-          Assume no other non-numeric values in the string.
-  DATA    arrays
+  PROBLEM
+    input is a string of digits that have a plus or minus or no symbol prefix
+    output is the integer number, with minus prefix resulting in a negative number
+    you may use the function from the previous lesson.
+
   ALGORITHM
-    - function stringToSignedInteger(str)
-      - declare `digits` and split `str` into array of it's characters.
-      - declare `num` and init to `0`.
-
-      - Check whether first character is a symbol of `-` or `+` or digit
-      - If it's a `+` or a digit, call `stringToPosInteger(str) and assign to `num`
-      - If it's a `-`, call `stringToNegInteger(str) and assign to `num`
-
-      - return `num`
-
-    - function stringToPosInteger(str) 
-      - same function as `stringToInteger(str)` in last exercise
-
-    - function stringToNegInteger(str)
-      - declare `num` and init it to `0`
-      - split `str` to an array, and we're gonna store that in `arr`
-      - remove the first element from `arr` and discard it. 
-
-      - iterate over `arr`
-        - for each element in `arr`, subtract the 10s place of the current element and reassign to `num`
-
-      - return `num`
+    calculate the number value of the given string
+    if the prefix of the input is a minus sign, return the negative value
+    otherwise return the value
 */
 
 console.log(stringToSignedInteger("4321") === 4321); // logs true
@@ -56,21 +35,13 @@ console.log(stringToSignedInteger("+100") === 100); // logs true
 
 function stringToSignedInteger(str) {
   switch (str[0]) {
-    case '+': return stringToInteger(str.slice(1, str.length));
-    case '-': return -stringToInteger(str.slice(1, str.length));
+    case '-': return -stringToInteger(str.slice(1));
+    case '+': return stringToInteger(str.slice(1));
     default:  return stringToInteger(str);
   }
 }
 
 function stringToInteger(str) {
-  const digits = str.split('');
-  let num = 0;
-
-  for (let i = 0; i < digits.length; i++) {
-    if (digits[i] !== '+') {
-      num += digits[i] * (10 ** (digits.length - i - 1));
-    }
-  }
-
-  return num;
+  const digits = str.split('').reverse();
+  return digits.reduce((sum, digit, i) => sum + digit * 10 ** i, 0);
 }

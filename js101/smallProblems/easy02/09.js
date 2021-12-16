@@ -21,33 +21,24 @@
 // calculate the result by analyzing the characters in the string.
 
 /*
-  INPUT   string of digits
-  OUTPUT  number made of those digits
-  RULES   create a number from a string. 
-          Don't worry about base.
-          Don't worry about non-numeric characters
-          Don't use `String()` or `Number()` or `parseInt()`
-  DATA    arrays
+  PROBLEM
+    input is a string of digits
+    output is its numerical equivalent
+    you may not use built-in explicit type conversion methods
+    given numbers will be positive
+
   ALGORITHM
-  (build numbers with power series)
-    - function stringToInteger(str)
-      - split the string to an array. 
-      - (the length of the array is the largest multiple of 10...)
-      - declare `num` and init to `0`.
-      - iterate over array.
-        - add '10 ** (arr.length - index - 1) to `num`
-      return `num`
+    split the string into an array and reverse it
+    iterate over the array
+      multiply each element by the power it represents and add it to a sum
+      (each index represents its 10s place)
+    end iteration
+    return sum
 */
 
 function stringToInteger(str) {
-  const digits = str.split('');
-  let num = 0;
-
-  for (let i = 0; i < digits.length; i++) {
-    num += digits[i] * (10 ** (digits.length - i - 1));
-  }
-
-  return num;
+  const digits = str.split('').reverse();
+  return digits.reduce((sum, digit, i) => sum + digit * 10 ** i, 0);
 }
 
 console.log(stringToInteger("4321") === 4321); // logs true

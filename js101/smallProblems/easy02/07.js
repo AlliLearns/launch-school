@@ -16,19 +16,16 @@
 // truthy/falsey value as returned by `||` and `&&`.
 
 /*
-  INPUT   two values as operands
-  OUTPUT  a boolean
-  RULES   return `true` if one but not both operands are truthy.
-          return `false` otherwise.
-  DATA    
-  THOUGHTS
-    Return true if one but not both. So, have to check for both first. 
-    Then can check for either...
+  PROBLEM
+    input is two values of any type
+    output is a boolean based on the exclusive or of those values
+    return `true` if exactly one of its arguments is truthy and `false` otherwise
+
   ALGORITHM
-    - function xor(operand1, operand2)
-      if (operand1 && operand2) return false
-      if (operand1 || operand2) return true
-      return false
+    return whether exactly one operand is true...
+    if AND is true, then both operands are true, so return false
+    if OR is true, and we're passed the AND, then exactly one operand is true, so return true
+    if neither of these were true, then return false
 */
 
 function xor(operand1, operand2) {

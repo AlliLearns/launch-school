@@ -6,27 +6,21 @@
 // and so on elements of the argument Array.
 
 /*
-  INPUT   input is an array
-  OUTPUT  output is a new array
-  RULES   output array is every odd element of input array
-          assume array input. 
-  DATA    arrays
+  PROBLEM
+    input is an array
+    output is an array of every other element of the input array
+    start the count at the 1st element (index 0)
+
   ALGORITHM
-    - function oddities(arr) 
-      - declare `oddIndices` and init to empty array
-      - iterate over `arr` and add the odd elements onto `oddIndices`
-      - (an odd element is not an odd index) So this will actually need the even indices. 
-      - return `oddIndices`
+    iterate over the array, starting at 0 and jumping by 2
+      push input array's value onto output array
+    end iteration
+
+    return output array
 */
 
 function oddities(arr) {
-  const oddIndices = [];
-
-  for (let i = 0; i < arr.length; i += 2) {
-    oddIndices.push(arr[i]);
-  }
-
-  return oddIndices;
+  return arr.filter((_, i) => i % 2 === 0);
 }
 
 console.log(oddities([2, 3, 4, 5, 6])); // logs [2, 4, 6]

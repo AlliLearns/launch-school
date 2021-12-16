@@ -9,21 +9,15 @@
 // You might also want to check the `Math.sign()` function.
 
 /*
-  INPUT   a number
-  OUTPUT  a string representation of that number
-  RULES   handle signs.
-          assume integer number inputs only
-          assume we aren't worrying about -0 input. 
-  DATA    arrays
+  PROBLEM
+    input is a signed integer
+    output is a string representation
+
   ALGORITHM
-    - function signedIntegerToString(num)
-      - if `num` is `0` then return `'0'`
-
-      - declare and init `sign` to `Math.sign(num)`
-
-      - switch on `sign`
-        - case `-1`: return `-` + integerToString();
-        - case `1`: return `+` + integerToString()
+    if num is 0, return '0'
+    grab the sign of the number
+    if -1, return a negative sign with call to `integerToString` from last exercise
+    if 1, return a positive sign with call to `integerToString` from last exercise
 */
 
 function signedIntegerToString(num) {

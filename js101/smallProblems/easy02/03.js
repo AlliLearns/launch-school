@@ -2,13 +2,12 @@
 // multiplies them together and returns the result.
 
 /*
-  INPUT   two numbers
-  OUTPUT  one number
-  RULES   expect only numerical inputs.
-  DATA    primitive numbers
+  PROBLEM
+    input is two number arguments
+    output is their product
+
   ALGORITHM
-    - function multiply(num1, num2)
-      - return num1 * num 2
+    return the product of the two arguments
 */
 
 const multiply = (num1, num2) => num1 * num2;

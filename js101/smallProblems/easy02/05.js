@@ -6,37 +6,14 @@
 // Don't worry about validating the input. 
 
 /*
-  INPUT   two positive inters from user input
-  OUTPUT  numbers that result from various mathematical operations.
-  RULES   don't worry about validating user input.
-  DATA    primitive numbers
+  PROBLEM
+    input is user input, prompting for two positive integers
+    output is printing the result of a number of operations on those numbers
+
   ALGORITHM
-    - declare a constant `readLine` that will require `readline-sync`
-
-    - declare constant `num1` and init it to `prompt(ask for num1)`
-    - declare constant `num2` and init it to `prompt(ask for num2)`
-
-    - run each of the 6 math functions and print their results. 
-
-    - function promptUser(message)
-      - return readLine.question(`${drawPrompt()} ${message}: `);
-
-    - function formatOperationResult(num1, num2, operator) {
-      switch (operator) {
-        case "+": return `${drawPrompt()} ${num1} ${operator} ${num2} = doAddition(num1, num2)`;
-        case "-": 
-        case "*": 
-        case "/": 
-        case "%": 
-        case "**": 
-        default: return `Invalid operation`;
-      }
-    }
-
-    function drawPrompt() {
-      return `=>`;
-    }
-    
+    ask user for the first number and store in `num1`
+    ask user for the second number and store in `num2`
+    print the result of the following operations:    
     - function doAddition(num1, num2) return num1 + num 2
     - function doSubtraction(num1, num2) return num1 - num2
     - function doMultiplication(num1, num2) return num1 * num2

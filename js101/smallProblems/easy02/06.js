@@ -5,15 +5,15 @@
 // always contain at least two words.
 
 /*
-  INPUT   a string of at least two words
-  OUTPUT  a string of the second to last word
-  RULES   input strings will have at least two words.
-          input strings will be delimited with spaces.
-  DATA    string primitives
+  PROBLEM
+    input is a string with at least two words
+    output is a string representing the second to last word of the input
+    words are sequences of non-blank characters
+    assume words are separated by whitespace
+
   ALGORITHM
-    - function penultimate(str)
-      - create an array consisting of each word in the string
-      - return the second to last word in the array
+    split the input string into an array of its words
+    return the second to last index of the array
 */
 
 function penultimate(str) {

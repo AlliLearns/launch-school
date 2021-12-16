@@ -9,18 +9,15 @@
 
 
 /*
-  INPUT   An array with two or more elements, representing someone's name
-          An object that contains the person's title and occupation. 
-  OUTPUT  A string that returns a greeting using this information. 
-  RULES   The input array will have at least two elements
-          The input object will have a 'title' and an 'occupation' key.
-  DATA    Primitive strings, arrays and objects.
+  PROBLEM
+    input is an array and and object
+    input array contains two or more elements that represent a person's name
+    input object will contain a `title` and `occupation` property with their values
+    output will print a greeting that uses the person's full name and mentions the person's title
+
   ALGORITHM
-    - function greetings(nameArr, jobObj)
-      - declare `personName` variable and init it to the joined `nameArr`, with space delimiter. 
-      - declare `title` and init to `jobObj[title].
-      - declare `occupation` and init to `jobObj[occupation].
-      - return a string `Hello, ${personName}! Nice to have a ${title} ${occupation} around.`
+    isolate the person's name, title and occupation into variables
+    return the greeting `Hello, ${personName}! Nice to have a ${title} ${occupation} around.`
 */
 
 function greetings(nameArr, jobObj) {
