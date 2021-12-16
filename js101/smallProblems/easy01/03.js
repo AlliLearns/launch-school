@@ -2,15 +2,15 @@
 // to the console, with each number on a separate line. 
 
 /*
-    INPUT   integer numbers
-    OUTPUT  printing
-    RULES   print even numbers from 1 to 99 inclusive
-    DATA    primitive numbers
+    PROBLEM
+        no input
+        output is printing to console
+        print all even numbers in range [1, 99].
+
     ALGORITHM
-        - declare a `minimum` variable and initialize it to 1.
-        - declare a `maximum` variable and initialize it to 99.
-        - loop from `minimum` to `maximum` inclusive 
-            - print every even number.
+        iterate from 1 to 99 inclusive
+            if iterator is even, log it to console
+        end iteration
 */
 
 const MINIMUM = 1;

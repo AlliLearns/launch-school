@@ -2,15 +2,15 @@
 // (to the console) with each number on a separate line.
 
 /*
-    INPUT   integer numbers
-    OUTPUT  printing
-    RULES   log odd numbers from 1 to 99 inclusive
-    DATA    primitive 
+    PROBLEM
+        no input
+        output is printing to console
+        print all odd numbers in the range [1, 99]
+
     ALGORITHM
-        - declare a variable `maximum` and set it to 99.
-        - declare a variable `minimum` and set it to 99.
-        - create a for loop that starts at `minimum` and stops at `maximum`
-            - print every odd number.
+        iterate from 1 to 99 inclusive
+            if iterator is odd, print to console
+        end iteration
 */
 
 const MINIMUM = 1;

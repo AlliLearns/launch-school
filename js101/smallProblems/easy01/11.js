@@ -4,34 +4,26 @@
 // the UTF-16 values of every character in the string. 
 
 /*
-  INPUT   string
-  OUTPUT  number
-  RULES   sum the UTF-16 values of each character in a string
-          don't assume that input will be a string.
-  DATA    strings or others that can be converted into a string
-          arrays
+  PROBLEM
+    input is a string
+    output is a number
+    output number represents the sum of the UTF-16 values of each char of the input string
+    assume characters are included in this 
+    assume that if the string is empty, we return 0
+
   ALGORITHM
-    - function utf16Value(str)
-      - reassign `str` to String(str)
-      - split the string into an array of its characters
-      - declare `sum` variable and init to 0
-      - loop over array
-        - convert character to UTF-16 value
-        - Add value to `sum`
-      - return `sum`
+    if the length of the string is 0, return 0
+    split the input string into an array of characters
+    iterate over array 
+      sum UTF-16 values of each character
+    end iteration
+    return sum
 */
 
 function utf16Value(str) {
-  str = String(str);
+  if (str.length === 0) return 0;
   const chars = str.split('');
-  let sum = 0;
-
-  for (let i = 0; i < chars.length; i++) {
-    let charValue = chars[i].charCodeAt();
-    sum += charValue;
-  }
-
-  return sum;
+  return chars.reduce((sum, char) => sum + char.charCodeAt(), 0);
 }
 
 console.log(utf16Value('Four score'));         // 984

@@ -5,25 +5,20 @@
 // 1 sqm == 10.7639 sqft
 
 /*
-  INPUT   user input
-  OUTPUT  floating point numbers
-  RULES   get user input. 
-          assume user will enter whole integer numbers.
-  DATA    primitive numbers
+  PROBLEM
+    input is user input that will specify the length and width of a room in meters
+    output is a string that states the area of the room in square meters and square feet
+    conversion factor is 10.7639sqft
+
   ALGORITHM
-    - import readline-sync and store it in `readLine` variable.
-    - declare a constant `SQFT` variable and initialize it to the conversion value. 
-    
-    - function prompt(question)
-      - return the result of a readline call with a prompt and the given `question`. 
-    
-    - get user input for the length of the room in meters and store it in a new variable `lengthInMeters`
-    - get user input for the width of the room in meters and store it in a new variable `widthInMeters`
+    define constant SQFT and init to 10.7639
+    get user input for length in meters and store in `length`
+    get user input for width of room in meters and store in `width`
 
-    - Declare `areaInMeters` and initialize it to the area of the room in meters. Restrict to two decimals.
-    - Declare `areaInSqft` and initialize it to the area of the room in square feet. Restrict to two decimals.
+    calculate area of room with `length * width` and store in `meterArea`
+    calculate area of room with `meterArea * SQFT` and store in `sqftArea`
 
-    - print `The area of the room is ${areaInMeters} square meters (${areaInSqft} square feet).`
+    log `The area of the room is ${meterArea} square meters (${sqftArea} square feet).`
 */
 
 const readLine = require('readline-sync');

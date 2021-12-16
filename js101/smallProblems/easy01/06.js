@@ -5,37 +5,20 @@
 // the entered integer, inclusive. 
 
 /*
-  INPUT   user input
-  OUTPUT  a number
-  RULES   compute consecutive sum or consecutive multiplication of numbers 1 to n.
-          assume we will not need input validation. 
-          assume user will use the words `s` or `p` for input
-  DATA    primitive data and arrays
+  PROBLEM
+    input is user input for positive integer value and whether they want to do addition or multiplication
+    output is the formatted result of their choice printed to console
+    don't worry about input validation
+    if they want addition, add all numbers between [0 and n] and log it
+    if they want multiplication, multiply all numbers from [1 to n] and log it
+
   ALGORITHM
-    - declare a constant `readLine` that requires readline-sync
+    ask user for an integer greater than 0 and store it in `num`
+    ask user for 's' or 'p' for what they want to compute and store in `operation`
 
-    - ask user for an integer greater than 0 and store response in `num`
-    - ask user for their operation and store response in `operation`
-
-    - if operation is sum, 
-      - declare `result` and initialize it to evaluation of doAddition(num)
-      - print result as sum.
-    - if operator is mult, 
-      - declare `result` and initialize it to evaluation of doMultiplication(num)
-      - print result as multiplication
-
-    - function prompt(question) 
-      - return readLine.question(`=> ${question}: `);
-
-    function doAddition(num) 
-      - declare variable `sum` and init it to 0
-      - loop up to the value of `num` and add the current iterator number to `sum`, incrementing the iterator by 1.
-      - return `sum`
-    
-    function doMultiplication(num)
-      - declare variable `mult` and init it to 1
-      - loop up to the value of `num` and multiply the current iterator number with the current value of `mult`, incrementing the iterator by 1
-      - return the value of `mult`    
+    if they want addition, do addition and log to console
+    if they want multiplication, get product and log to console
+    if invalid input, let them know that their operation was invalid. 
 */
 
 const readLine = require('readline-sync');
@@ -46,9 +29,11 @@ const operation = prompt('Enter "s" to compute the sum, or "p" to compute the pr
 if (operation === 's') {
   const sum = doAddition(num);
   console.log(`The sum of the integers between 1 and ${num} is ${sum}.`);
-} else {
+} else if (operation === 'p') {
   const product = doMultiplication(num);
   console.log(`The product of the integers between 1 and ${num} is ${product}.`);
+} else {
+  console.log("You chose an invalid operation.");
 }
 
 

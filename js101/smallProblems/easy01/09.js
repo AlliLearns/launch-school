@@ -6,13 +6,18 @@
 // leap years both before and after 1752.
 
 /*
-  INPUT
-  OUTPUT
-  RULES
-  DATA
+  PROBLEM
+    input is an integer representing a year
+    output is a boolean saying whether it's a leap year
+    a Julian leap year is one that is divisible by 4
+    a Gregorian leap year was determined in the last exercise 
+    Gregorian started in 1752
+
   ALGORITHM
-    - If the year is before 1752, return true if year is divisible by 4.
-    - Use original code otherwise. 
+    if the year is before 1752, return Julian leap year
+    otherwise return Gregorian leap year, from last exercise
+
+    julian leap year is `year % 4 === 0`
 */
 
 function isLeapYear(year) {

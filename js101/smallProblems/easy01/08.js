@@ -11,15 +11,18 @@
 // leap year or `false` if it is not a leap year. 
 
 /*
-  INPUT   a number that represents a year
-  OUTPUT  a boolean that represents whether the year is a leap year
-  RULES   check if the given integer number counts as a leap year
-          assume integer input larger than 0.
-  DATA    primitive value
+  PROBLEM
+    input is an integer representing a year 
+    output is a boolean saying whether that year is a leap year
+    assume positive integer inputs
+    a year is a leap year if: 
+      the year is evenly divisible by 4 but not 100
+      the year is evenly divisible by 400...
+
   ALGORITHM
-    (I wasn't able to solve this one with PEDAC or speaking out loud.)
-    (I had to put them into wordy variables to figure it out though.)
-    - Tip: test for the least-common cases first, not the most common.
+    return true if the year is evenly divisible by 400
+    return true if the year is evenly divisible by 4 but not 100
+    return false otherwise
 */
 
 function isLeapYear(year) {

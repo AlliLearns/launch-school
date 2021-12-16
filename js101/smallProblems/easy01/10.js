@@ -6,17 +6,17 @@
 // than `1`.
 
 /*
-  INPUT   maximum integer
-  OUTPUT  sum of integers
-  RULES   sum integers from 1 to n if integer is multiple of 3 or 5. 
-          assume that the number passed in will be an integer
-  DATA    primitive number
+  PROBLEM
+    input is an integer greater than 1
+    output is an integer
+    output is the sum of all numbers from [1, n] that are multiples of 3 or 5.
+
   ALGORITHM
-    - function multisum(num)
-      - declare `sum` and init to `0`.
-      - loop through 1 to num inclusive
-        - add loop counter if counter is a multiple of 3 or 5
-      - return `sum`
+    declare variable `sum` and init to 0.
+    iterate from 1 to num inclusive
+      if iterator is a multiple of 3 or 5, add iterator to `sum`
+    end iteration
+    return `sum`
 */
 
 function multisum(num) {

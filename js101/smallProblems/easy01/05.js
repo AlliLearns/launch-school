@@ -6,25 +6,19 @@
 // and assume that the user will enter numbers. 
 
 /*
-  INPUT   user input for bill amount and tip rate. 
-  OUTPUT  print tip and total amount of the bill. 
-  RULES   can ignore input validation.
-          can assume user will enter numbers.
-  DATA    primitive data
+  PROBLEM
+    input is user input for bill amount and tip rate
+    output is logging total bill and tip to console
+
   ALGORITHM
-    - declare constant `readLine` and initialize it to require('readline-sync')
-
-    - function prompt(question) 
-      - return a readLine.question(`=> ${question}`);
+    ask user to enter bill amount and store in `bill`
+    ask user to enter tip rate and store in `tipPercentage`
     
-    - ask user for bill amount and store in `bill`
-    - ask user for tip percentage and store in `tipPercentage`
+    calculate `tip` with `bill * (tipPercentage / 100))
+    calculate `totalBill` with `bill + tip`
 
-    - calculate `tip` with bill * tipPercentage
-    - calculate `totalBill` with bill + tip
-
-    - print tip amount in USD format
-    - print total bill in USD format
+    print `The tip is \$${tip}` to console
+    print `The total is \$${totalBill}` to console.
 */
 
 

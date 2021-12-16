@@ -11,15 +11,15 @@ console.log(isOdd(0)); // => false
 console.log(isOdd(7)); // => true
 
 /*
-  INPUT   integer number
-  OUTPUT  boolean 
-  RULES   return whether the number's abs value is odd
-  DATA    primitive values - integers and booleans 
-  ALGORITHM 
-    - function isOdd(num)
-      - if the absolute value of `num` is odd, return true. 
-      - otherwise, return false.
-      - a comparison returns a boolean, so we can return the evaluation of that. 
+  PROBLEM
+    input is an integer number
+    output is a boolean
+    returns true if the input's abs value is odd
+    returns false otherwise 
+    assume integer number inputs
+
+  ALGORITHM
+    take the absolute value of the input and return whether the remainder is 1 when divided by 2
 */
 
 function isOdd(num) {
