@@ -12,10 +12,11 @@
 
 
 /*
-  INPUT   user input
-  OUTPUT  print to console
-  DATA    strings
-  RULES   
+  PROBLEM 
+    input is user input
+    output is a string that represents a madlib
+
+    
   ALGORITHM
     - declare `readLine` and initialize it to require readline-sync
 

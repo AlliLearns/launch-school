@@ -3,21 +3,18 @@
 
 
 /*
-  INPUT   three integer numbers between 1 and 100
-  OUTPUT  a string representing a grade
-  RULES   assume the above input
-  DATA    objects
+  PROBLEM
+    input is three numbers that represent a score
+    output is a character that represents the grade of the mean of the input
+    assume all numerical inputs will be in the range [1, 100]
+
   ALGORITHM
-    - declare `gradeMap` as an object literal that maps a grade to its range
-    
-    - function getGrade(grade1, grade2, grade3)
-      - declare `mean` and initialize it to `(grade1 + grade2 + grade3) / 3;
-
-      - iterate over gradeMap
-        - if `mean` is included in the current key's value, return key
-      - end iteration
-
-    - return "F"
+    make a map of letter grades to grade ranges
+    function getGrade(grade1, grade2, grade3) {
+      calculate the mean from the sum of the inputs divided by 3
+      iterate over the gradeMap object and return the mean if it's in a found range
+      return 'F' if the mean isn't at least 60
+    }
 */
 
 const gradeMap = {

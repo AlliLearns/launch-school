@@ -7,26 +7,37 @@
 // `1901 - 2000` comprise the 20th century. 
 
 /*
-  INPUT   number
-  OUTPUT  string
-  RULES
-  DATA
-  ALGORITHM
-    - declare a variable `suffix` and give it an array of each postfix value 
-    - function century(year)
-      - 
-      - console.log(formatCentury(century))
+  PROBLEM
+    input is a number that represents a year
+    output is a string that tells us what century this year is in
+    century's are represented by the number followed by the appropriate suffix
+    new centuries begin in years that end with '01'. [1901 - 2000] is the 20th century
 
-    - function formatCentury(century)
-      - centuryStr = century.toString();
-      - lastDigit = Number(centuryStr[centuryStr.length - 1]);
-      - switch ()
+  ALGORITHM
+    get the number of the current century from the ceiling of the input year div by 100
+    return the formatted century string
+
+    function formatCentury(century) {
+      if the century ends with a special exception, return `${century}th`
+
+      grab the last digit of the century
+      if the last digit is 1, return `${century}st`
+      if the last digit is 2, return `${century}nd`
+      if the last digit is 3, return `${century}rd`
+      all other cases, return `${century}th`
+    }
+
+    function catchException(year) {
+      isolate the last two digits of year
+      if the last two digits are any one of 11, 12 or 13, return true
+      else return false
+    }
 */
 
 
 function century(year) {
   const century = Math.ceil(year / 100);
-  console.log(formatCentury(century));
+  return formatCentury(century);
 }
 
 function formatCentury(century) {
@@ -46,12 +57,12 @@ function catchWithTh(lastTwo) {
   return exceptions.includes(lastTwo);
 }
 
-century(2000);        // "20th"
-century(2001);        // "21st"
-century(1965);        // "20th"
-century(256);         // "3rd"
-century(5);           // "1st"
-century(10103);       // "102nd"
-century(1052);        // "11th"
-century(1127);        // "12th"
-century(11201);       // "113th"
+console.log(century(2000));        // "20th"
+console.log(century(2001));        // "21st"
+console.log(century(1965));        // "20th"
+console.log(century(256));         // "3rd"
+console.log(century(5));           // "1st"
+console.log(century(10103));       // "102nd"
+console.log(century(1052));        // "11th"
+console.log(century(1127));        // "12th"
+console.log(century(11201));       // "113th"

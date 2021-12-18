@@ -5,30 +5,17 @@ logInBox('To boldly go where no one has gone before.');
 logInBox('');
 
 /*
-  INPUT   string
-  OUTPUT  printing
-  RULES   put a single space between the vertical borders and the string
-          put a single line above and below the string
-  DATA    strings
-  ALGORITHM 
-    - function logInBox(str) 
-      - declare and init `len` to `str.length + 2`
+  PROBLEM
+    input is a line of text
+    output is printing the input in a box
 
-      - makeSeparator(len)
-      - makeRow(len)
-      - makeRow(str)
-      - makeRow(len)
-      - makeSeparator(len)
+  ALGORITHM
+    print the top border
+    print a line of empty spaces the length of the string + 2
+    print a line with the given string
+    print a line of empty spaces the length of the string + 2
+    print the top border
 
-    - function makeSeparator(len)
-      - return `+${-.repeat(len)}+`
-    
-    - function makeRow(content)
-      - declare and init `contentType` to `typeof content`
-      - switch (contentType)
-        case 'string': return `| ${content} |`
-        case 'number': return `|${' '.repeat(content)|`
-        default: return `something went wrong`
 */
 
 function logInBox(str) {

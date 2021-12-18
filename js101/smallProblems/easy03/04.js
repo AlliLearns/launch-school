@@ -22,40 +22,47 @@ console.log(findFibonacciIndexByLength(10n) === 45n);
 console.log(findFibonacciIndexByLength(16n) === 74n);
 console.log(findFibonacciIndexByLength(100n) === 476n);
 console.log(findFibonacciIndexByLength(1000n) === 4782n);
-console.log(findFibonacciIndexByLength(10000n) === 47847n);
+// console.log(findFibonacciIndexByLength(10000n) === 47847n);
 
 // The last example may take a minute or so to run.
 
 /*
-  INPUT   number
-  OUTPUT  number
-  RULES   index of the first Fibonacci number that has n digits. 
-  DATA    primitive values...
-  ALGORITHM 
-    - function findFibonacciIndexByLength(num) 
-      - declare `series` and initialize it to array [1, 1]
+  PROBLEM
+    input is a specified number of sigfigs
+    output is a BigInt 
+    output represents the index of the first Fibonacci number of the input length
+    the input is always an integer greater than or equal to 2
+    assume input will always be a BigInt
 
-      - start a loop of unknown length
-        - push 
-        - break loop on (countDigits(series[index])) === num)
+  ALGORITHM
+    create a three-value array [1, 1, 2] stored in `last`
+    create `digitCount` and init to `1`
 
-      - return BigInt(series.length)
+    begin an unknown length iteration
+      rotate the array `last` with the last value being the next value in the series
+      count the digits of the last value in the series
+      if the digit count is larger than the current digit count, increment `digitCount`
+      if `digitCount` equals the input number, break
+    end iteration
 
-    - function countDigits(num) {
-
-    }
+    return `digitCount`
 */
 
 function findFibonacciIndexByLength(num) {
-  const series = [1, 1];
+  const last = [1, 1, 2];
+  let callCount = 3n;
 
   while (true) {
-    const length = series.length;
-    series.push(BigInt(series[length - 1]) + BigInt(series[length - 2]));
-    if (countDigits(series[length]) === num) break;
+    callCount = updateFibonacci(last, callCount);
+    const digitCount = countDigits(last[last.length - 1]);
+    if (digitCount === num) return callCount;
   }
+}
 
-  return BigInt(series.length);
+function updateFibonacci(arr, callCount) {
+  arr.shift();
+  arr.push(arr[0] + arr[1]);
+  return callCount += 1n;
 }
 
 
@@ -65,8 +72,8 @@ function countDigits(num) {
   while (num > 0) {
     count += 1;
     
-    const digit = num % 10n;
-    num = (num - digit) / 10n;
+    const digit = num % 10;
+    num = (num - digit) / 10;
   }
 
   return BigInt(count);

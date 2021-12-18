@@ -190,5 +190,7 @@
 | 13.12.2021 M | JS109-01 | 0700 - 0800 | Skimmed the Regular Expression Book. |
 | 14.12.2021 T | JS109-01 | 0700 - 1000 <br> 1200 - 1300 <br> 1930 - 2030 | Worked on problems 1 - 10 of `easy06`. <br> Worked on problems 11 - 12 of `easy06`. <br> Worked on problems 1 - 3 of `list processing`. |
 | 15.12.2021 W | JS109-01 | 0730 - 1000 <br> 1000 - 1100 <br> 1100 - 1300 <br> 1300 - 1530 | Worked on problems 4 - 10 of `list processing`. <br> Had a PEDAC study session with Antonina. <br> Thought about meeting and worked on second problem. <br> Met with study buddy. |
-| 16.12.2021 R | JS109-01 | 0500 - 0600 <br> 0600 - 0700 | Updated PEDAC for all `easy01` problems. <br> Updated PEDAC for all `easy02` problems. |
+| 16.12.2021 R | JS109-01 | 0500 - 0600 <br> 0600 - 0700 <br> 1300 - 1500 | Updated PEDAC for all `easy01` problems. <br> Updated PEDAC for all `easy02` problems. <br> Met with study buddy. |
+| 17.12.2021 F | JS109-01 | 0500 - 0600 <br> 0600 - 0700 <br> 0800 - 0930 <br> 1300 - 1500 | Met with study buddy. <br> Worked on a guide to help study buddy with callbacks. <br> Met with study buddy. <br> Met with study buddy. |
+| 18.12.2021 S | JS109-01 | 0230 - 0400 <br> 0900 - 0915 | Updated PEDAC for problems 1 - 6 of `easy03`. <br> Updated PEDAC for problems 7 - 10 of `easy03`. |
 <!-- |  |  |  |  | -->
