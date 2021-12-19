@@ -192,5 +192,6 @@
 | 15.12.2021 W | JS109-01 | 0730 - 1000 <br> 1000 - 1100 <br> 1100 - 1300 <br> 1300 - 1530 | Worked on problems 4 - 10 of `list processing`. <br> Had a PEDAC study session with Antonina. <br> Thought about meeting and worked on second problem. <br> Met with study buddy. |
 | 16.12.2021 R | JS109-01 | 0500 - 0600 <br> 0600 - 0700 <br> 1300 - 1500 | Updated PEDAC for all `easy01` problems. <br> Updated PEDAC for all `easy02` problems. <br> Met with study buddy. |
 | 17.12.2021 F | JS109-01 | 0500 - 0600 <br> 0600 - 0700 <br> 0800 - 0930 <br> 1300 - 1500 | Met with study buddy. <br> Worked on a guide to help study buddy with callbacks. <br> Met with study buddy. <br> Met with study buddy. |
-| 18.12.2021 S | JS109-01 | 0230 - 0400 <br> 0900 - 0915 | Updated PEDAC for problems 1 - 6 of `easy03`. <br> Updated PEDAC for problems 7 - 10 of `easy03`. |
+| 18.12.2021 S | JS109-01 | 0230 - 0400 <br> 0900 - 0915 <br> 0915 - 1000 <br> 1000 - 1030 <br> 1300 - 1530 | Updated PEDAC for problems 1 - 6 of `easy03`. <br> Updated PEDAC for problems 7 - 10 of `easy03`. <br> Completed problems 1 - 4 of `string and text` <br> Met with study buddy. <br> Met with study buddy and did problems 5 - 7 of `string and text`. |
+| 19.12.2021 U | JS109-01 | 0630 - 0800 <br> 0800 - 0930 <br> 0930 - 0000 | Thought about how my problem solving process works. <br> Completed problems 7 - 10 of `string and text`. <br> - |
 <!-- |  |  |  |  | -->
