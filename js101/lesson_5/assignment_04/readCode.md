@@ -59,7 +59,7 @@ We will provide an informal method that can help you analyze the code when this 
 - Program sees the return value of `map` but it's not captured and it's discarded.
 - Program ends.
 
-Clearly, we can see there's a lot going on. Around 30 steps in this _one line_ of code and nested 5 layers deep. How do you keep 5 layers of action in your head at once? Practice. Most programmers don't break down what's going on to this level of detail and try to keep it in their heads. Experience helps you zone in on the important bits. In this process, those are the four lines identified by `***`. Four pieces of information are a lot easier to remember than 30!
+Clearly, we can see there's a lot going on. Around 30 steps in this _one line_ of code and nested 5 layers deep. How do you keep 5 layers of action in your head at once? Practice mainly, but most programmers don't break down what's going on to this level of detail and try to keep it in their heads. Experience helps you zone in on the important bits. In this process, those are the four lines identified by `***`. Four pieces of information are a lot easier to remember than 30!
 
 Experience is great, but experienced programmers had to go through _some_ sort of process to move this level of evaluation into a more unconscious part of their mind. So what did they do when they were learning? It depends on the person, of course, but this section is about providing a suggestion of what you can do. 
 
