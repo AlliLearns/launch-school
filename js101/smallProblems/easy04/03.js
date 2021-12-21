@@ -2,6 +2,12 @@
 // will retire and how many more years the 
 // user has to work until retirement. 
 
+// What is your age? 30
+// At what age would you like to retire? 70
+
+// It's 2017. You will retire in 2057.
+// You have only 40 years of work to go!
+
 /*
   PROBLEM
     Get the user's age and the age at which they want to retire.

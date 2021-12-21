@@ -22,10 +22,9 @@ console.log(runningTotal([14, 11, 7, 15, 20]));    // [14, 25, 32, 47, 67]
 console.log(runningTotal([3]));                    // [3]
 console.log(runningTotal([]));                     // []
 
-function runningTotal(arr) {
+function runningTotal1(arr) {
   if (arr.length === 0) return [];
   
   let sum = 0;
   return arr.map(num => sum += num);
 }
-
