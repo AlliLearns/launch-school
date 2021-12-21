@@ -18,9 +18,23 @@ console.log(doubleConsonants(''));                // ""
     case-sensitive
 
   ALGORITHM
-    
+    create an array of consonants
+    make a new string `doubled`
+    iterate over the input string
+      if character is a consonant, concat it twice on `doubled`
+      if not, concat once on `doubled`
+    end iteration
+    return `doubled`  
 */
 
 function doubleConsonants(str) {
+  const consonants = [...'bcdfghfklmnpqrstvwxyz'];
+  const chars = [...str]
+  let doubled = '';
+  for (let i = 0; i < chars.length; i++) {
+    if (consonants.includes(chars[i])) doubled += `${chars[i]}${chars[i]}`;
+    else doubled += `${chars[i]}`;
+  }
 
+  return doubled;
 }
