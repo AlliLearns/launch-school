@@ -13,9 +13,27 @@
         end iteration
 */
 
-const MINIMUM = 1;
-const MAXIMUM = 99;
+function printOddsLoop() {
+    const MINIMUM = 1;
+    const MAXIMUM = 99;
 
-for (let i = MINIMUM; i <= MAXIMUM; i++) {
-    if (i % 2 === 1) console.log(i);
+    for (let i = MINIMUM; i <= MAXIMUM; i++) {
+        if (i % 2 === 1) console.log(i);
+    }
 }
+
+/*
+    ALTERNATE ALGORITHM - recursion
+      function printOdds(n = 1)
+        return if n is equal to or greater than 99
+        log the value of n
+        return a call tp printOdds with n + 2 as an argument
+*/
+
+function printOdds(n = 1) {
+    if (n > 99) return;
+    console.log(n);
+    return printOdds(n + 2);
+}
+
+printOdds();

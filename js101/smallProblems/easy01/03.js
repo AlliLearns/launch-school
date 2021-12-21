@@ -13,9 +13,18 @@
         end iteration
 */
 
-const MINIMUM = 1;
-const MAXIMUM = 99;
+function printEvensLoop() {
+    const MINIMUM = 1;
+    const MAXIMUM = 99;
+    
+    for (let i = MINIMUM; i <= MAXIMUM; i++) {
+        if (i % 2 === 0) console.log(i);
+    }
+}
 
-for (let i = MINIMUM; i <= MAXIMUM; i++) {
-    if (i % 2 === 0) console.log(i);
+
+function printEvens(n = 2) {
+    if (n > 99) return
+    console.log(n);
+    return printEvens(n + 2);
 }
