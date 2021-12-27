@@ -205,10 +205,16 @@
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
 | 20.12.2021 M | JS109-01 | 0600 - 0700 <br> 1500 - 1700 | Worked on problems 5 - 10 of `medium01`. <br> Met with study buddy. |
-| 21.12.2021 T | JS109-01 | 0730 - 0830 <br> 1330 - 0000 | Worked on problems 1 - 3 of `medium02`. <br> Explored alternate methods for small problem exercises. |
+| 21.12.2021 T | JS109-01 | 0730 - 0830 | Worked on problems 1 - 3 of `medium02`. |
 | 22.12.2021 W | JS109-01 | 1130 - 1230 | Attended another study session with Antonina. |
 | 23.12.2021 R | JS109-01 | 0700 - 0800 | Practiced with the previous study session questions we were given to check progress. |
 | 24.12.2021 F | - | Nothing |  |
 | 25.12.2021 S | - | Nothing |  |
-| 26.12.2021 U | JS109-01 | 0530 - 0000 |  |
+| 26.12.2021 U | JS109-01 | 0530 - 1030 | Scattered studies and problems. |
+<!-- |  |  |  |  | -->
+
+## Week 08
+| Date | Course | Times | Notes |  
+| - | - | - | - | 
+| 27.12.2021 M | JS109-01 | 0700 - 0830 <br> 1030 - 1200 | Scattered studies and problems. <br> Did the `Interpretive Problem Solving` small problems. |
 <!-- |  |  |  |  | -->
