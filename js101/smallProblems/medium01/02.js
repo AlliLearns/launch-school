@@ -11,6 +11,29 @@ console.log(rotateRightmostDigits(735291, 4));      // 732915
 console.log(rotateRightmostDigits(735291, 5));      // 752913
 console.log(rotateRightmostDigits(735291, 6));      // 352917
 
+// 0555 - 0609
+/*
+  PROBLEM
+    input is an integer and the number of digits you want to shift right
+    output is the input integer with its digits shifted
+
+  ALGORITHM
+    split the input into two arrays, one that contains the digits that won't change, one that does
+    iterate over the digits to change
+      reassign to result of `rotateArray` to the rotating array
+    end iteration
+    return the joined arrays transformed into a number
+*/
+
+function rotateRightmostDigits(number, count) {
+  const static = [...number.toString()].slice(0, -count);
+  let dynamic = [...number.toString()].slice(-count);
+  dynamic = rotateArray(dynamic);
+
+  return Number(static.concat(dynamic).join(''));
+}
+
+
 /*
   PROBLEM
     input is a number and an integer representing the number of digits to rotate
@@ -28,7 +51,7 @@ console.log(rotateRightmostDigits(735291, 6));      // 352917
     return the number conversion of the string
 */
 
-function rotateRightmostDigits(number, count) {
+function rotateRightmostDigits1(number, count) {
   if (count <= 1) return number;
   if (number.toString().length < count) return number;
 

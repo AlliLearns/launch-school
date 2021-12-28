@@ -4,7 +4,7 @@
 // digit fixed in place and rotate the remaining digits 
 // to get `329175`. Keep the first two digits fixed in
 // place and rotate again to get `321759`. Keep the 
-// first three digits fixed in place adn rotate again 
+// first three digits fixed in place and rotate again 
 // to get `321597`. Finally, keep the first four digits 
 // fixed in place and rotate the final two digits to 
 // get `321579`. The resulting number is called the 
@@ -20,6 +20,38 @@ console.log(maxRotation(3));               // 3
 console.log(maxRotation(35));              // 53
 console.log(maxRotation(105));             // 15 -- the leading zero gets dropped
 console.log(maxRotation(8703529146));      // 7321609845
+
+/*
+  PROBLEM
+    input is an integer
+    output is the maximum rotation of that integer
+    if the number is one digit, return the input
+    if the rotated number has a leading zero, it gets dropped
+
+  ALGORITHM
+    split the number into its digits
+    if the length of the array is 1, return the input
+
+    iterate over the digits
+      reassign the result of the input to the outcome of rotateRightMostDigits(number, iterator)
+    end iteration
+    return the joined array turned into a number
+*/
+
+function maxRotation(num) {
+  const digits = [...num.toString()];
+  if (digits.length <= 1) return num;
+
+  for (let i = digits.length; i > 0; i--) {
+    num = rotateRightmostDigits(num, i);
+    console.log(num);
+  }
+
+  return num;
+}
+
+// Second solution found in six minutes
+
 
 /*
   PROBLEM
@@ -39,7 +71,7 @@ console.log(maxRotation(8703529146));      // 7321609845
     return an explicitly type-coerced number version of the string
 */
 
-function maxRotation(num) {
+function maxRotation1(num) {
   let str = num.toString();
   if (str.length <= 1) return num;
 
