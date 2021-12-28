@@ -216,5 +216,6 @@
 ## Week 08
 | Date | Course | Times | Notes |  
 | - | - | - | - | 
-| 27.12.2021 M | JS109-01 | 0700 - 0830 <br> 1030 - 1200 | Scattered studies and problems. <br> Did the `Interpretive Problem Solving` small problems. |
+| 27.12.2021 M | JS109-01 | 0700 - 0830 <br> 1030 - 1200 <br> 1300 - 1400 <br> 1600 - 1800 | Scattered studies and problems. <br> Did the `Interpretive Problem Solving` small problems. <br> Did the `debugging JS` small problems 1 - 7. <br> Met with study buddy. |
+| 28.12.2021 T | JS109-01 | 0530 - 0630 <br> 0800 - 0900 | Redid a couple of the `medium01` problems. <br> Took the interview assessment. |
 <!-- |  |  |  |  | -->
