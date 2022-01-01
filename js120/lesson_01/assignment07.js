@@ -1,38 +1,31 @@
-function createCar(make, fuelLevel, engineOn) {
-  const newObj = {
-    make: make,
-    fuelLevel: fuelLevel,
-    engineOn: engineOn,
+// Functions as Object Factories
+// Topic: Automated object creation
 
-    startEngine() {
-      this.engineOn = true;
-    },
+// Goal: You want to make multiple objects of the same 'type'
+// 'Same type' meaning they exist to model the same real-world concept.
+// Like how two dogs can be different, they are still two dogs. 
+// We'll show a way to create two dogs without having to use two object literals. 
 
-    drive() {
-      this.fuelLevel -= 0.1;
-    },
+// We don't want to have to do this: 
+const dog1 = { name: 'Drew', bark() { console.log("woof!") } }
+const dog2 = { name: 'Jess', bark() { console.log("woof!") } }
+// There's a lot of duplication going on.
+// If we wanted to change what 'bark' does, we'd have to change it
+// on every object literal representing a dog that exists. 
 
-    stopEngine() {
-      this.engineOn = false;
-    },
 
-    refuel(percent) {
-      if ((this.fuelLevel + (percent / 100)) <= 1) {
-        this.fuelLevel += (percent / 100);
-      } else {
-        this.fuelLevel = 1;
-      }
-    },
+// We'll use an "object factory" to avoid this:
+function makeDog(name) {
+  const newDog = {
+    name, 
+    bark() {console.log('Woof!')},
   }
 
-  return newObj;
+  return newDog;
 }
 
-let raceCar1 = createCar('BMW', 0.5, false);
-raceCar1.drive();
+const dog3 = makeDog('James');
+const dog4 = makeDog('Larry');
 
-let raceCar2 = createCar('Ferrari', 0.7, true);
-raceCar2.drive();
-
-let raceCar3 = createCar('Jaguar', 0.4, false);
-raceCar3.drive();
+// The object factory wraps a new object in a function call.
+// Now if we want to change what `bark` does, we only have to do it in one place.
