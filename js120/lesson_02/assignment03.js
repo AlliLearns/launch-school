@@ -1,6 +1,41 @@
 // Object Prototypes
-// Topic: Improving the downsides to factory functions?
 // Topic: Introducing the concept of a prototype.
+
+// I think they needed to introduce other things before they got into
+// this topic...what would have made more sense to me?
+
+// The concept of a hidden / internal property
+// JavaScript's view of an object
+// JavaScript's view of a function as an object
+// Object and Function and what they look like. 
+
+/* The concept of a hidden / internal property
+  JavaScript programs are executed in the environment of a JavaScript engine.
+  ECMAScript is a standard that provides the creation guide for JavaScript engines. 
+  To be compliant with the spec, JS engine developers ...
+  'The actual implementation an engine uses may be very different from what the internal methods sketch out'
+  'but to be compliant they have to produce behavior or results that are consistent with the internal methods'
+  There are many design details whose implementation ECMAScript leaves up to the developers of JS engines.
+  One of those are how "internal slots" and "internal methods" are defined, accessed and handled. 
+  These are denoted in the standard by a double-bracket notation eg. [[StringData]]
+  One that we will reference in this section is called [[Prototype]]
+  The [[Prototype]] internal slot is a conceptual home for the value of an object's prototype. 
+  
+*/ 
+
+
+
+
+
+// The topics on this page...
+// What is a prototype?
+// The Default Prototype
+// Iterating over Objects with Prototypes
+// The Prototype Chain
+// The `__proto__` Property
+// Property Look-Up in the Prototype Chain
+// Methods on Object.prototype
+// Objects Without Properties
 
 // An object factory serves two purposes: 
 // 1. Returns an object that represents data of a specific type
@@ -47,12 +82,3 @@
 // Ignoring for now.
 
 
-// The topics on this page...
-// What is a prototype?
-// The Default Prototype
-// Iterating over Objects with Prototypes
-// The Prototype Chain
-// The `__proto__` Property
-// Property Look-Up in the Prototype Chain
-// Methods on Object.prototype
-// Objects Without Properties
