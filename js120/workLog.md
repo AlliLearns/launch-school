@@ -44,6 +44,7 @@
 ## Week 02
 | Date | Course | Times | Notes |  
 | - | - | - | - |
-| 10.01.2022 M | JS129-01 | 0430 - 0730 <br> 1200 - 1400 | Worked to understand execution context. <br> Met with study buddy. | 
-| 11.01.2022 T | JS129-01 | 0600 - 0900 <br> 1300 - 1400 | Worked on understanding different object creation. <br> Met with study buddy. | 
+| 10.01.2022 M | JS129-01 <br> - | 0430 - 0730 <br> 1200 - 1400 | Worked to understand execution context. <br> Met with study buddy. | 
+| 11.01.2022 T | JS129-01 <br> - <br> JS129-01 | 0600 - 0900 <br> 1300 - 1400 <br> 1400 - 1700 | Worked on understanding different object creation. <br> Met with study buddy. <br> Completed `problems 1 - 4` of the object exercises. | 
+| 12.01.2022 W | JS120-01 <br> - <br> JS129-01 | 0700 - 1300 <br> 1300 - 1500 <br> 1500 - 1600 | Studied various topics and worked on study guide. <br> Met with study buddy. <br> Met with study buddy. | 
 <!-- |  |  |  |  | --> 
