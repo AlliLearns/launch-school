@@ -30,7 +30,10 @@
 */
 
 
+
 const readLine = require('readline-sync');
+
+const MAX_SCORE = 2;
 
 const ROCK = 'rock';
 const PAPER = 'paper';
@@ -44,7 +47,15 @@ const WINNING_COMBO = {
 }
 
 function createPlayer() {
-  const newPlayer = { move: null };
+  const newPlayer = { 
+    wins: 0,
+    move: null,
+
+    incrementWins() { this.wins += 1; },
+    getWins()       { return this.wins; },
+    resetWins()     { this.wins = 0; },
+  };
+
   return newPlayer;
 }
 
@@ -100,6 +111,7 @@ const RPSGame = {
   human:    createHuman(),
   computer: createComputer(),
   roundWinner: null,
+  higherWinCount: {},
 
   displayWelcomeMessage() {
     console.clear();
@@ -112,7 +124,6 @@ const RPSGame = {
   },
 
   displayGoodbyeMessage() {
-    console.clear();
     console.log(`--------------------------------`);
     console.log(`     Thanks for playing!`);
     console.log(`--------------------------------`);
@@ -136,7 +147,26 @@ const RPSGame = {
 
     if (humanMove === computerMove) this.roundWinner = 'draw';
     if (WINNING_COMBO[humanMove] === computerMove) this.roundWinner = 'player';
-    if (WINNING_COMBO[computerMove] === humanMove) this.roundWinner = 'computer';    
+    if (WINNING_COMBO[computerMove] === humanMove) this.roundWinner = 'computer'; 
+  },
+
+  updatePlayerWins() {
+    const currentWinner = this.roundWinner;
+    if (currentWinner === 'player') this.human.incrementWins();
+    if (currentWinner === 'computer') this.computer.incrementWins();
+  },
+
+  updateHighestWins() {
+    const playerWins = this.human.getWins();
+    const computerWins = this.computer.getWins();
+    if (playerWins < computerWins) this.higherWinCount = {computer: computerWins};
+    else this.higherWinCount = {player: playerWins};
+  },
+
+  reportWinCount() {
+    console.log(`You have ${this.human.getWins()} wins.`);
+    console.log(`Computer has ${this.computer.getWins()} wins.`);
+    console.log(``);
   },
 
   generateWinningMessage() {
@@ -148,24 +178,45 @@ const RPSGame = {
     }
   },
 
+  
   playAgain() {
     console.log(``);
     let again = promptUser(`Would you like to play again? (y/n)`);
     return again.toLowerCase()[0] === `y`;
   },
+  
+  winnerFound() {
+    return Object.values(this.higherWinCount)[0] >= MAX_SCORE;
+  },
+  
+  displayGameWinner() {
+    console.clear();
+    const winner = Object.keys(this.higherWinCount);
+    if (winner[0] === 'player') console.log(`Player wins!`);
+    else console.log(`Computer wins!`);
+    console.log(``);
+  },
+
+  playRound() {
+    this.human.choose();
+    this.computer.choose();
+
+    this.displayMoves();
+    this.determineWinner();
+    this.updatePlayerWins();
+    this.updateHighestWins();
+
+    console.log(this.generateWinningMessage());
+    this.reportWinCount();
+  },
  
   play() {
     this.displayWelcomeMessage();
 
-    do {
-      console.clear();
-      this.human.choose();
-      this.computer.choose();
-      this.displayMoves();
-      this.determineWinner();
-      console.log(this.generateWinningMessage());
-    } while (this.playAgain())
+    do    { this.playRound(); }
+    while (!this.winnerFound());
 
+    this.displayGameWinner();
     this.displayGoodbyeMessage();
   },
 };
