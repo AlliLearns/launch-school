@@ -38,13 +38,17 @@ const MAX_SCORE = 2;
 const ROCK = 'rock';
 const PAPER = 'paper';
 const SCISSORS = 'scissors';
-const VALID_MOVES = [ROCK, PAPER, SCISSORS];
+const SPOCK = 'spock';
+const LIZARD = 'lizard';
+const VALID_MOVES = [ROCK, PAPER, SCISSORS, SPOCK, LIZARD];
 
-const WINNING_COMBO = {
-  [ROCK]: SCISSORS,
-  [SCISSORS]: PAPER,
-  [PAPER]: ROCK,
-}
+const WINNING_COMBOS = {
+  [ROCK]:     [SCISSORS, LIZARD],
+  [PAPER]:    [ROCK, SPOCK],
+  [SCISSORS]: [PAPER, LIZARD],
+  [SPOCK]:    [SCISSORS, ROCK],
+  [LIZARD]:   [PAPER, SPOCK],
+};
 
 function createPlayer() {
   const newPlayer = { 
@@ -64,12 +68,12 @@ function createHuman() {
 
   const newHuman = {
     choose() {
-      let choice = promptUser(`Please choose 'rock', 'paper' or 'scissors'`).toLowerCase();
+      let choice = promptUser(`Please choose 'rock', 'paper', 'scissors', 'spock' or 'lizard'`).toLowerCase();
 
       while (true) {
         if (VALID_MOVES.includes(choice)) break;
         console.log(`${drawPrompt()} Sorry, invalid choice.`);
-        choice = promptUser(`Please choose 'rock', 'paper' or 'scissors'`).toLowerCase();
+        choice = promptUser(`Please choose 'rock', 'paper', 'scissors', 'spock' or 'lizard'`).toLowerCase();
       }
 
       this.move = choice;
@@ -146,8 +150,8 @@ const RPSGame = {
     const computerMove = this.computer.move;
 
     if (humanMove === computerMove) this.roundWinner = 'draw';
-    if (WINNING_COMBO[humanMove] === computerMove) this.roundWinner = 'player';
-    if (WINNING_COMBO[computerMove] === humanMove) this.roundWinner = 'computer'; 
+    if (WINNING_COMBOS[humanMove].includes(computerMove)) this.roundWinner = 'player';
+    if (WINNING_COMBOS[computerMove].includes(humanMove)) this.roundWinner = 'computer'; 
   },
 
   updatePlayerWins() {
