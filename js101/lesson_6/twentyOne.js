@@ -139,6 +139,10 @@ function dealHands(deck) {
   return [playerHand, dealerHand];
 }
 
+function drawCard(hand, deck) {
+  hand.push(removeRandomCard(deck));
+}
+
 function removeRandomCard(deck) {
   const randomSuitIndex = Math.floor(Math.random() * SUIT_TYPES.length);
   const randomCardIndex = Math.floor(Math.random() * deck[randomSuitIndex].length);
@@ -247,7 +251,21 @@ function askHitOrStay() {
     return hitAgain[0] === 'h';
 }
 
+function winOrBust(hand) {
+  const sum = sumHand(hand);
 
+  if (checkWin(sum))  return true;
+  if (checkBust(sum)) return true;
+  return false;
+}
+
+function checkWin(sum) {
+  return sum === MAX_SUM;
+}
+
+function checkBust(sum) {
+  return sum > MAX_SUM;
+}
 
 function runDealerTurn(hand, deck) {
   informUser(`${DEALER}'s turn.`);
@@ -262,14 +280,6 @@ function runDealerTurn(hand, deck) {
   }
 }
 
-function winOrBust(hand) {
-  const sum = sumHand(hand);
-
-  if (checkWin(sum))  return true;
-  if (checkBust(sum)) return true;
-  return false;
-}
-
 function roundResult(playerHand, dealerHand) {
   const playerTotal = sumHand(playerHand);
   const dealerTotal = sumHand(dealerHand);
@@ -279,14 +289,6 @@ function roundResult(playerHand, dealerHand) {
   if (playerTotal < dealerTotal)  return [WIN, DEALER];
   if (playerTotal > dealerTotal)  return [WIN, PLAYER];
   return [TIE];
-}
-
-function checkWin(sum) {
-  return sum === MAX_SUM;
-}
-
-function checkBust(sum) {
-  return sum > MAX_SUM;
 }
 
 function printWinningMessage(resultArr) {
@@ -323,10 +325,6 @@ function shouldGoAgain(message) {
   }
 
   return answer[0] !== 'n';
-}
-
-function drawCard(hand, deck) {
-  hand.push(removeRandomCard(deck));
 }
 
 function validateAnswer(answer, acceptedAnswers) {
