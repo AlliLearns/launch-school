@@ -80,5 +80,17 @@
 | Date | Course | Times | Notes |  
 | - | - | - | - |
 | 24.01.2022 M | JS120-01 | 0530 - 0800 | Reworked rps to use different objects. | 
-| 25.01.2022 T | Js120-05 | 0800 - 0000 | Worked on Tic Tac Toe again. | 
+| 25.01.2022 T | JS120-05 | 0800 - 0000 | Worked on Tic Tac Toe again. | 
 <!-- |  |  |  |  | --> 
+
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 09
+| Date | Course | Times | Notes |  
+| - | - | - | - |
+| 02.03.2022 | JS129 | 1630 - 1930 | Took written assessment. | 
+
