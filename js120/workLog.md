@@ -46,5 +46,39 @@
 | - | - | - | - |
 | 10.01.2022 M | JS129-01 <br> - | 0430 - 0730 <br> 1200 - 1400 | Worked to understand execution context. <br> Met with study buddy. | 
 | 11.01.2022 T | JS129-01 <br> - <br> JS129-01 | 0600 - 0900 <br> 1300 - 1400 <br> 1400 - 1700 | Worked on understanding different object creation. <br> Met with study buddy. <br> Completed `problems 1 - 4` of the object exercises. | 
-| 12.01.2022 W | JS120-01 <br> - <br> JS129-01 | 0700 - 1300 <br> 1300 - 1500 <br> 1500 - 1600 | Studied various topics and worked on study guide. <br> Met with study buddy. <br> Met with study buddy. | 
+| 12.01.2022 W | JS129-01 <br> - <br> JS129-01 | 0700 - 1300 <br> 1300 - 1500 <br> 1500 - 1600 | Studied various topics and worked on study guide. <br> Met with study buddy. <br> Met with study buddy. | 
+| 13.01.2022 R | JS129-01 | 0530 - 0900 <br> 1500 - 1600 | Studied various topics and worked on study guide. <br> Met with study buddy. | 
+| 14.01.2022 F | JS129-01 <br> - | 0400 - 0800 <br> 1300 - 1500 | Studied various topics and worked on study guide. <br> Met with study buddy. | 
+| 15.01.2022 S | JS129-01 | 0530 - 0730 | Studied various topics and worked on study guide. | 
+| 16.01.2022 U | JS129-01 | 0800 - 1000 | Studied various topics and worked on study guide. | 
+<!-- |  |  |  |  | --> 
+
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 03
+| Date | Course | Times | Notes |  
+| - | - | - | - |
+| 17.01.2022 M | JS129-01 | 0600 - 0800 | Worked on understanding inheritance. | 
+| 18.01.2022 T | JS129-01 <br> - | 0630 - 0800 <br> 1300 - 1500 | Worked on understanding inheritance. <br> Met with study buddy. | 
+| 19.01.2022 W | JS129-01 <br> - | 0600 - 1100 <br> 1300 - 1500 | Worked on understanding hidden object properties. <br> Met with study buddy. | 
+| 20.01.2022 R | JS129-01 <br> - <br> JS120-01 | 0730 - 0930 <br> 1300 - 1500 <br> 1630 - 1800 | Worked on understanding inheritance. <br> Met with study buddy. <br> Worked on understanding inheritance. | 
+| 21.01.2022 F | JS129-01 | 0700 - 1200 <br> 1400 - 1730 | Worked on understanding execution context. <br> Met with study buddies. | 
+|  |  |  |  | 
+| 23.01.2022 U | JS120-01 | 1830 - 2030 <br> 2030 - 2200 | Reworked `assignments 9 - 11`. <br> Did the first two rps bonus features. | 
+<!-- |  |  |  |  | --> 
+
+<hr>
+<br>
+<br>
+<hr>
+
+## Week 04
+| Date | Course | Times | Notes |  
+| - | - | - | - |
+| 24.01.2022 M | JS120-01 | 0530 - 0800 | Reworked rps to use different objects. | 
+| 25.01.2022 T | Js120-05 | 0800 - 0000 | Worked on Tic Tac Toe again. | 
 <!-- |  |  |  |  | --> 
