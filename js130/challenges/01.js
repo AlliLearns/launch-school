@@ -36,8 +36,7 @@
       if any side is zero, throw.
       if any side is negative, throw.
       if the sum of two sides are <= remaining side, throw.
-      
-      takes `side1`, `side2` and `side3` parameters and assigns their values to properties on the new object.
+      take `side1`, `side2` and `side3` parameters and assigns their values to properties on the new object.
     end `constructor`
     
     `kind` method of `Triangle`
@@ -48,56 +47,51 @@
     end `kind`
 */
 
-module.exports = Triangle;
 
-function Triangle(side1, side2, side3) {
-  const sides = [side1, side2, side3];
-  const triangleError = new Error("Invalid Triangle");
-  
-  const hasZeros = sides.includes(0);
-  const hasNegatives = sides.some(elem => Math.sign(elem) === -1 );
-  
-  if (hasZeros || hasNegatives) throw triangleError;
-  
-  
-  const longLengths = sides.reduce((acc, elem, idx, arr) => {
-    const third = elem;
-    let sum = 0;
+
+const triangleClosure = (function() {
+  function validateTriangle(sides) {
+    const triangleError = new Error("Invalid triangle lengths");
     
-    switch (idx) {
-      case 0: sum = arr[1] + arr[2]; break;
-      case 1: sum = arr[0] + arr[2]; break;
-      case 2: sum = arr[0] + arr[1]; break;
-    }
+    const hasZeros = sides.includes(0);
+    const hasNegatives = sides.some(elem => Math.sign(elem) === -1 );
     
-    if (sum <= third) acc.push(idx);
-    return acc;
-  }, []);
-  
-  
-  if (longLengths.length > 0) throw triangleError;
-  
-  this.sides = sides;
-}
-
-
-
-Triangle.prototype.kind = function kind() {
-  switch (new Set(this.sides).size) {
-    case 1: return "equilateral";
-    case 2: return "isosceles";
-    case 3: return "scalene";
-    default: return "invalid triangle";
+    if (hasZeros || hasNegatives) throw triangleError;
+    
+    
+    const longLengths = sides.reduce((acc, elem, idx, arr) => {
+      const third = elem;
+      let sum = 0;
+      
+      switch (idx) {
+        case 0: sum = arr[1] + arr[2]; break;
+        case 1: sum = arr[0] + arr[2]; break;
+        case 2: sum = arr[0] + arr[1]; break;
+      }
+      
+      if (sum <= third) acc.push(idx);
+      return acc;
+    }, []);
+    
+    
+    if (longLengths.length > 0) throw triangleError;
   }
-}
 
+  return class Triangle {
+    constructor(...sides) {
+      validateTriangle(sides);
+      this.sides = sides;
+    }
 
-// console.log(new Triangle(3, 4, 5));
-// new Triangle(1, 1, 3);
-// new Triangle(7, 3, 2);
-// new Triangle(10, 1, 3);
-// new Triangle(1, 1, 2);
+    kind() {
+      switch (new Set(this.sides).size) {
+        case 1: return "equilateral";
+        case 2: return "isosceles";
+        case 3: return "scalene";
+        default: return "invalid triangle";
+      }
+    }
+  }
+})();
 
-// console.log(new Triangle(2, 2, 2).kind() === "equilateral");
-// console.log(new Triangle(3, 4, 4).kind() === "isosceles");
-// console.log(new Triangle(3, 4, 5).kind() === "scalene");
+module.exports = triangleClosure;
